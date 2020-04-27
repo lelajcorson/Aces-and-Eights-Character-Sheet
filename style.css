@@ -16,8 +16,9 @@ input{
 }
 
 .sheet-bio > div{
-    display: flex;
     margin-right: 10px;
+    margin-bottom: 0px;
+    display: flex;
 }
 
 .sheet-age input, .sheet-height input, .sheet-BPs input{
@@ -44,11 +45,56 @@ img{
     float: right;
     width: 43%;
     margin-right: 20px;
-    margin-top: 5px;
+    margin-bottom: 0;
 }
 
 .sheet-race input, .sheet-nationality input, .sheet-profession input{
     width: 150px;
 }
 
+hr {
+    display: block;
+    border-top: 2px solid #000000;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    padding: 0;
+}
 
+.charsheet{
+    background: white;
+}
+
+h2{
+    font-family: "Rye";
+    padding:0px;
+    margin: 0px;
+}
+
+.sheet-abilities{
+    display: grid;
+    grid-template-columns: 130px;
+    grid-template-rows: 260px;
+    column-gap: 5px;
+    row-gap: 5px;
+    justify-items: center;
+}
+
+.sheet-grid{
+    grid-col: 1;
+    grid-row: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.sheet-abilities label{
+    font-size: 20px;
+    font-family: "Rye";
+}
+
+.sheet-grid input{
+    height: 22px;
+    width: 50px !important;
+    background: red;
+}

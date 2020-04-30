@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Rye&display=swap');
 
-label {
+/*Bio*/
+.sheet-bio label {
     display: inline;
     font-family: "Playfair Display";
-    font-size: 20px;
+    font-size: 17px;
 }
 
-input{
+.sheet-bio input{
     display: inline;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-size: 15px;
+    height: 20px;
 }
 
 .sheet-bio{
@@ -17,7 +25,7 @@ input{
 
 .sheet-bio > div{
     margin-right: 10px;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
     display: flex;
 }
 
@@ -41,6 +49,11 @@ input{
     width: 50px;
 }
 
+.sheet-race input, .sheet-nationality input, .sheet-profession input{
+    width: 150px;
+}
+
+/*Logo*/
 img{
     float: right;
     width: 43%;
@@ -48,15 +61,11 @@ img{
     margin-bottom: 0;
 }
 
-.sheet-race input, .sheet-nationality input, .sheet-profession input{
-    width: 150px;
-}
-
 hr {
     display: block;
     border-top: 2px solid #000000;
-    margin-top: 8px;
-    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 5px;
     padding: 0;
 }
 
@@ -64,36 +73,38 @@ hr {
     background: white;
 }
 
-h2{
+h1{
     font-family: "Rye";
     padding:0px;
     margin: 0px;
 }
 
-.sheet-abilities{
+.sheet-grid{
     display: grid;
-    grid-template-columns: 130px;
-    grid-template-rows: 260px;
+    grid-template-columns: 180px 160px;
+    grid-template-rows: 40px 40px 185px;
+}
+
+.sheet-abilities_grid{
+    grid-row: 2/ span 2;
+    grid-col: 1;
+    display: grid;
+    grid-template-columns: 70px 60px;
+    grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px;
     column-gap: 5px;
     row-gap: 5px;
     justify-items: center;
 }
 
-.sheet-grid{
-    grid-col: 1;
-    grid-row: 1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.sheet-abilities label{
-    font-size: 20px;
+.sheet-abilities_grid label{
+    font-size: 24px;
     font-family: "Rye";
+    align-self: end;
+    padding: 2px;
 }
 
-.sheet-grid input{
-    height: 22px;
+.sheet-abilities_grid input{
+    height: 21px;
     width: 50px !important;
+    align-self: start;
 }

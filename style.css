@@ -61,9 +61,6 @@ img{
     margin-bottom: 0;
 }
 
-.sheet-race input, .sheet-nationality input, .sheet-profession input{
-    width: 150px;
-
 hr {
     display: block;
     border-top: 2px solid #000000;
@@ -110,4 +107,24 @@ h1{
     height: 21px;
     width: 50px !important;
     align-self: start;
+}
+
+.sheet-HP{
+    font-family: "Rye";
+    font-size: 20px;
+    margin-top: 8px;
+    margin-left: 3px;
+}
+
+.sheet-HP_input input{
+    font-family: "Playfair Display";
+    width: 80px !important;
+    height: 35px;
+    text-align: center;
+    font-size: 30px;
+    margin-left: 40px;
+}
+
+.sheet-HP_grid{
+    grid-row: span 2;
 }

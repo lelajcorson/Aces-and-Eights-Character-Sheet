@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Rye&display=swap');
 
-label {
+/*Bio*/
+.sheet-bio label {
     display: inline;
     font-family: "Playfair Display";
-    font-size: 20px;
+    font-size: 17px;
 }
 
-input{
+.sheet-bio input{
     display: inline;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-size: 15px;
+    height: 20px;
 }
 
 .sheet-bio{
@@ -16,8 +24,9 @@ input{
 }
 
 .sheet-bio > div{
-    display: flex;
     margin-right: 10px;
+    margin-bottom: 5px;
+    display: flex;
 }
 
 .sheet-age input, .sheet-height input, .sheet-BPs input{
@@ -40,13 +49,65 @@ input{
     width: 50px;
 }
 
+.sheet-race input, .sheet-nationality input, .sheet-profession input{
+    width: 150px;
+}
+
+/*Logo*/
 img{
     float: right;
     width: 43%;
     margin-right: 20px;
-    margin-top: 5px;
+    margin-bottom: 0;
 }
 
 .sheet-race input, .sheet-nationality input, .sheet-profession input{
     width: 150px;
+
+hr {
+    display: block;
+    border-top: 2px solid #000000;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.charsheet{
+    background: white;
+}
+
+h1{
+    font-family: "Rye";
+    padding:0px;
+    margin: 0px;
+}
+
+.sheet-grid{
+    display: grid;
+    grid-template-columns: 180px 160px;
+    grid-template-rows: 40px 40px 185px;
+}
+
+.sheet-abilities_grid{
+    grid-row: 2/ span 2;
+    grid-col: 1;
+    display: grid;
+    grid-template-columns: 70px 60px;
+    grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px;
+    column-gap: 5px;
+    row-gap: 5px;
+    justify-items: center;
+}
+
+.sheet-abilities_grid label{
+    font-size: 24px;
+    font-family: "Rye";
+    align-self: end;
+    padding: 2px;
+}
+
+.sheet-abilities_grid input{
+    height: 21px;
+    width: 50px !important;
+    align-self: start;
 }

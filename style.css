@@ -109,20 +109,28 @@ h1{
     align-self: start;
 }
 
-.sheet-HP{
-    font-family: "Rye";
-    font-size: 20px;
+.sheet-HP_grid label{
     margin-top: 8px;
-    margin-left: 3px;
+    margin-bottom: 10px;
 }
 
-.sheet-HP_input input{
+.sheet-hp_dash{
+    font-size: 40px;
+    display: inline;
+}
+
+.sheet-HP_grid input{
     font-family: "Playfair Display";
-    width: 80px !important;
-    height: 35px;
+    width: 60px !important;
+    height: 33px;
     text-align: center;
-    font-size: 30px;
-    margin-left: 40px;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.sheet-current_hp{
+    margin-left: 27px;
+    margin-right: 7px;
 }
 
 .sheet-HP_grid{

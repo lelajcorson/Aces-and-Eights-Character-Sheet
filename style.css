@@ -26,7 +26,6 @@
 .sheet-bio > div{
     margin-right: 10px;
     margin-bottom: 5px;
-    display: flex;
 }
 
 .sheet-age input, .sheet-height input, .sheet-BPs input{
@@ -50,22 +49,21 @@
 }
 
 .sheet-race input, .sheet-nationality input, .sheet-profession input{
-    width: 150px;
+    width: 145px;
 }
 
 /*Logo*/
 img{
     float: right;
-    width: 43%;
+    width: 40%;
     margin-right: 20px;
-    margin-bottom: 0;
 }
 
 hr {
     display: block;
     border-top: 2px solid #000000;
     margin-top: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     padding: 0;
 }
 
@@ -79,14 +77,21 @@ h1{
     margin: 0px;
 }
 
+.sheet-grid_header{
+    font-family: "Rye";
+    font-size: 24px;
+    text-align: center;
+}
+
 .sheet-grid{
     display: grid;
-    grid-template-columns: 180px 160px;
-    grid-template-rows: 40px 40px 185px;
+    grid-template-columns: 180px 200px auto;
+    grid-template-rows: 40px 50px 80px 95px 200px;
+    column-gap: 20px;
 }
 
 .sheet-abilities_grid{
-    grid-row: 2/ span 2;
+    grid-row: 2/ span 3;
     grid-col: 1;
     display: grid;
     grid-template-columns: 70px 60px;
@@ -135,4 +140,90 @@ h1{
 
 .sheet-HP_grid{
     grid-row: span 2;
+}
+
+.sheet-money_grid input{
+    font-family:"Playfair Display";
+    font-size: 21px;
+    width: 200px;
+    text-align: center;
+}
+
+.sheet-money_grid{
+    grid-row: 3;
+    grid-col: 2;
+}
+
+.sheet-skills_grid{
+    grid-col: 3;
+    display: grid;
+    grid-template-columns: 30px auto;
+    grid-template-rows: 40px 160px;
+    column-gap: 10px;
+}
+
+.sheet-skills_text_grid{
+    display: grid;
+    grid-template-columns: 182px 50px auto;
+    grid-template-rows: 30px;
+    column-gap: 15px;
+}
+
+.sheet-skills_text_grid label{
+    font-family: "Playfair Display";
+    font-size: 20px;
+}
+
+.sheet-skills_header{
+    grid-col: 1;
+    grid-row: span 2;
+    margin-left: 10px;
+}
+
+.sheet-skills_header label{
+    font-family: "Rye";
+    font-size: 24px;
+    display: inline;
+}
+
+.sheet-skill_name{
+    width: 200px;
+}
+
+.sheet-skill_tallies{
+    width: 50px !important;
+}
+
+.sheet-skill_mastery{
+    width: 100px;
+}
+
+.sheet-skills_text_grid input{
+    font-family: "Playfair Display";
+    font-size: 15px;
+    font-weight: bold;
+    height: 31px;
+}
+
+.sheet-skills_repeating{
+    margin-top: 0px;
+}
+
+.sheet-items_grid{
+    grid-col: 2 / span 2;
+    grid-row: 4;
+}
+
+.sheet-items_grid textarea{
+    resize: none;
+    height: 200px;
+}
+
+.sheet-big_box{
+    width: 430px;
+}
+
+textarea{
+    font-family: "Playfair Display";
+    font-size: 15px;
 }

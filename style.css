@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Rye&display=swap');
 
+input, select, textarea{
+    color: #000000;
+    font-weight: bold;
+}
+
 /*Bio*/
 .sheet-bio label {
     display: inline;
@@ -85,8 +90,8 @@ h1{
 
 .sheet-grid{
     display: grid;
-    grid-template-columns: 180px 200px auto;
-    grid-template-rows: 40px 50px 80px 95px 200px;
+    grid-template-columns: 180px 200px 400px;
+    grid-template-rows: 40px 50px 80px 95px 155px;
     column-gap: 20px;
 }
 
@@ -139,7 +144,8 @@ h1{
 }
 
 .sheet-HP_grid{
-    grid-row: span 2;
+    grid-row: 1 / span 2;
+    grid-col: 2;
 }
 
 .sheet-money_grid input{
@@ -156,6 +162,7 @@ h1{
 
 .sheet-skills_grid{
     grid-col: 3;
+    grid-row: 1 / span 5;
     display: grid;
     grid-template-columns: 30px auto;
     grid-template-rows: 40px 160px;
@@ -210,13 +217,32 @@ h1{
 }
 
 .sheet-items_grid{
-    grid-col: 2 / span 2;
-    grid-row: 4;
+    grid-col: 2;
+    grid-row: 4 / span 2;
 }
 
 .sheet-items_grid textarea{
     resize: none;
     height: 200px;
+}
+
+.sheet-weapons_grid{
+    grid-row: 1;
+    grid-col: 1;
+    margin: 0px;
+}
+
+.sheet-weapons_info_grid{
+    display: grid;
+    grid-template-columns: 800px;
+    grid-template-rows: 15px 50px;
+}
+
+.sheet-weapons_bio{
+    grid-col: 1;
+    grid-row: 2;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .sheet-big_box{
@@ -226,4 +252,26 @@ h1{
 textarea{
     font-family: "Playfair Display";
     font-size: 15px;
+}
+
+.sheet-grid_2{
+    display: grid;
+    grid-template-columns: 900px;
+    grid-template-rows: 200px;
+    margin-top: 10px;
+}
+
+.sheet-grid_2 label{
+    font-family: "Playfair Display";
+    font-size: 17px;
+}
+
+.sheet-grid_2 input{
+    margin-right: 15px;
+    font-family: "Playfair Display";
+    font-size: 15px;
+}
+
+.sheet-damage_per_shot{
+    width: 60px;
 }

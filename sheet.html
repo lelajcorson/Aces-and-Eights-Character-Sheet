@@ -176,27 +176,60 @@
         <label class = "grid_header">ITEMS</label>
         <textarea name = "attr_items"></textarea>
     </div>
-    
+</div>
+
+<div class = "grid_2">
     <!--Weapons-->
     <div class = "weapons_grid">
         <fieldset class = "repeating_weapons">
-            <label>Type</label>
-            <input type = "text" name = "attr_weapon_type">
-            <label>Draw Speed</label>
-            <input type = "number" name = "attr_weapon_draw_speed">
-            <label>Accuracy</label>
-            <input type = "number" name = "attr_weapon_accuracy">
-            <label>Damage Per Shot</label>
-            <input type = "number" name = "attr_weapon_damage">
-            <label>Reload Speed</label>
-            <input type = "number" name = "attr_weapon_reload_speed">
-            <label>Shots Fired</label>
-            <input type = "number" name = "attr_weapon_shots_fired">
-            <label>Other Details</label>
-            <input type = "text" name = "attr_weapon_details">
-            <label>Range</label>
+            <div class = "weapons_info_grid">
+                <div class = "weapons_bio">
+                    <div>
+                        <label>Type</label>   
+                    </div>
+                    <div>
+                       <input type = "text" name = "attr_weapon_type"> 
+                    </div>
+                    <div>
+                        <label>Draw Speed</label>  
+                    </div>
+                    <div>
+                        <input type = "number" name = "attr_weapon_draw_speed">    
+                    </div>
+                    <div>
+                        <label>Accuracy</label>
+                    </div>
+                    <div>
+                       <input type = "number" name = "attr_weapon_accuracy"> 
+                    </div>
+                    <div>
+                        <label>Damage/Shot</label> 
+                    </div>
+                    <div>
+                        <input type = "text" class = "damage_per_shot" name = "attr_weapon_damage">
+                    </div>
+                    <div>
+                        <label>Reload Speed</label> 
+                    </div>
+                    <div>
+                        <input type = "number" name = "attr_weapon_reload_speed">
+                    </div>
+                    <div>
+                        <label>Shots Fired</label> 
+                    </div>
+                    <div>
+                        <input type = "number" name = "attr_weapon_shots_fired">
+                    </div>
+                    <div>
+                        <label>Other Details</label>    
+                    </div>
+                    <div>
+                        <input type = "text" name = "attr_weapon_details">
+                    </div>
+                </div>
+            </div>
         </fieldset>
     </div>
 </div>
 
-<textarea class = "big_box" name = "attr_random_stuff"></textarea>
+<!--<textarea class = "big_box" name = "attr_random_stuff"></textarea>-->

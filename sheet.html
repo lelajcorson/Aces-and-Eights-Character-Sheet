@@ -51,7 +51,7 @@
     <button type="action" name="act_weapons">Weapons</button>
 </div>
 
-<input type='hidden' class='tabstoggle' name='attr_sheetTab'  value='weapons'/>
+<input type='hidden' class='tabstoggle' name='attr_sheetTab'  value='character'/>
     
 <div class = "character">
     <div class = "grid">
@@ -132,6 +132,14 @@
             <div>
                 <input type = "text" name = "attr_fame"/>
             </div>
+        </div>
+        
+        <!--Accuracy and Speed-->
+        <div class = "acc_speed">
+            <label class = "grid_header">SPEED</label>
+            <input type = "text" name = "attr_speed">
+            <label class = "grid_header">ACCURACY</label>
+            <input type = "text" name = "attr_acc">
         </div>
         
         <!--Hit Points-->
@@ -234,6 +242,7 @@
             <div>
                 <input type = "text" name = "attr_weapon_details">
             </div>
+            <button type = "roll" value = "/roll 1d20 + @{acc} + ?"></button>
         </div>
         
         <div class = "weapons_range">
@@ -319,6 +328,7 @@
                 <label>1500'</label> <input type = "text" name = "attr_range_1500">
             </div>
         </div>
+        <hr>
     </fieldset>
 </div>
 

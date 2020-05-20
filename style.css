@@ -4,6 +4,10 @@ input, select, textarea{
     color: #000000;
 }
 
+input, label, textarea{
+    font-family: "Playfair Display";
+}
+
 /*Tabs*/
 .sheet-character,
 .sheet-weapons{
@@ -18,7 +22,6 @@ input, select, textarea{
 /*Bio*/
 .sheet-bio label {
     display: inline;
-    font-family: "Playfair Display";
     font-size: 17px;
 }
 
@@ -27,7 +30,6 @@ input, select, textarea{
     border-top: 0px;
     border-right: 0px;
     border-left: 0px;
-    font-family: "Playfair Display";
     font-weight: bold;
     font-size: 15px;
     height: 20px;
@@ -129,6 +131,16 @@ h1{
     align-self: start;
 }
 
+.sheet-acc_speed label{
+    margin-top: 10px;
+}
+
+.sheet-acc_speed input{
+    margin-left: 65px;
+    font-size: 20px;
+    width: 50px;
+}
+
 .sheet-HP_grid label{
     margin-top: 8px;
     margin-bottom: 10px;
@@ -140,7 +152,6 @@ h1{
 }
 
 .sheet-HP_grid input{
-    font-family: "Playfair Display";
     width: 60px !important;
     height: 33px;
     text-align: center;
@@ -159,7 +170,6 @@ h1{
 }
 
 .sheet-money_grid input{
-    font-family:"Playfair Display";
     font-size: 21px;
     width: 200px;
     text-align: center;
@@ -187,7 +197,6 @@ h1{
 }
 
 .sheet-skills_text_grid label{
-    font-family: "Playfair Display";
     font-size: 20px;
 }
 
@@ -216,7 +225,6 @@ h1{
 }
 
 .sheet-skills_text_grid input{
-    font-family: "Playfair Display";
     font-size: 15px;
     font-weight: bold;
     height: 31px;
@@ -256,7 +264,6 @@ h1{
 }
 
 textarea{
-    font-family: "Playfair Display";
     font-size: 15px;
 }
 
@@ -265,13 +272,11 @@ textarea{
 }
 
 .sheet-weapons_bio label{
-    font-family: "Playfair Display";
     font-size: 17px;
 }
 
 .sheet-weapons_bio input{
     margin-right: 15px;
-    font-family: "Playfair Display";
     font-size: 15px;
 }
 
@@ -302,12 +307,10 @@ textarea{
 
 .sheet-weapons_range input{
     width: 40px;
-    font-family: "Playfair Display";
     font-size: 15px;
 }
 
 .sheet-weapons_range label{
     text-align: center;
-    font-family: "Playfair Display";
     font-size: 17px;
 }

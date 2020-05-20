@@ -2,7 +2,6 @@
 
 input, select, textarea{
     color: #000000;
-    font-weight: bold;
 }
 
 /*Bio*/
@@ -226,23 +225,27 @@ h1{
     height: 200px;
 }
 
-.sheet-weapons_grid{
+.sheet-weapons{
     grid-row: 1;
     grid-col: 1;
-    margin: 0px;
+    margin-top: 10px;
 }
 
 .sheet-weapons_info_grid{
     display: grid;
     grid-template-columns: 800px;
-    grid-template-rows: 15px 50px;
+    grid-template-rows: 15px 200px;
 }
 
 .sheet-weapons_bio{
     grid-col: 1;
-    grid-row: 2;
+    grid-row: 1;
     display: flex;
     flex-wrap: wrap;
+}
+
+.sheet-weapons_bio input{
+    margin-bottom: 5px;
 }
 
 .sheet-big_box{
@@ -256,7 +259,7 @@ textarea{
 
 .sheet-grid_2{
     display: grid;
-    grid-template-columns: 900px;
+    grid-template-columns: 879px;
     grid-template-rows: 200px;
     margin-top: 10px;
 }
@@ -274,4 +277,33 @@ textarea{
 
 .sheet-damage_per_shot{
     width: 60px;
+}
+
+.sheet-weapons_range{
+    display: grid;
+    grid-template-columns: 80px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+    grid-template-rows: 55px 55px;
+    grid-col: 1;
+    grid-row: 3;
+    margin-top: 10px;
+    column-gap: 15px;
+    margin-bottom: 10px;
+}
+
+.sheet-range_label{
+    grid-col: 1;
+    grid-row: 1 / span 2;
+}
+
+.sheet-range_label label{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sheet-weapons_range input{
+    width: 40px;
+}
+
+.sheet-weapons_range label{
+    text-align: center;
 }

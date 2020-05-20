@@ -102,27 +102,32 @@ h1{
 
 .sheet-grid{
     display: grid;
-    grid-template-columns: 180px 200px 400px;
-    grid-template-rows: 40px 50px 80px 95px 155px;
+    grid-template-columns: 236px 200px 400px;
+    grid-template-rows: 40px 50px 80px 95px 195px;
     column-gap: 20px;
 }
 
 .sheet-abilities_grid{
-    grid-row: 2/ span 3;
+    grid-row: 2/ span 4;
     grid-col: 1;
     display: grid;
-    grid-template-columns: 70px 60px;
-    grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px;
+    grid-template-columns: 60px 60px 116px;
+    grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px;
     column-gap: 5px;
     row-gap: 5px;
     justify-items: center;
 }
 
-.sheet-abilities_grid label{
+.sheet-ability_label_large{
     font-size: 24px;
     font-family: "Rye";
     align-self: end;
     padding: 2px;
+}
+
+.sheet-abilities_grid label + input{
+    height: 20px;
+    margin: 1px;
 }
 
 .sheet-abilities_grid input{
@@ -131,12 +136,22 @@ h1{
     align-self: start;
 }
 
+.sheet-abilities_grid div{
+}
+
+.sheet-small_label{
+    font-size: 13px;
+    margin-bottom: 1px;
+    margin-top: 0px;
+    padding: 0px;
+}
+
 .sheet-acc_speed label{
     margin-top: 10px;
 }
 
 .sheet-acc_speed input{
-    margin-left: 65px;
+    margin-left: 55px;
     font-size: 20px;
     width: 50px;
 }
@@ -297,7 +312,7 @@ textarea{
 
 .sheet-range_label{
     grid-col: 1;
-    grid-row: 1 / span 2;
+    grid-row: 1;
 }
 
 .sheet-range_label label{
@@ -313,4 +328,10 @@ textarea{
 .sheet-weapons_range label{
     text-align: center;
     font-size: 17px;
+}
+
+.sheet-weapons_button{
+    grid-col: 1;
+    grid-row: 2;
+    height: 20px;
 }

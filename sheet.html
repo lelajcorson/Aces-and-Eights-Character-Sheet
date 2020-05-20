@@ -62,84 +62,103 @@
         <!--Abilities--> 
         <div class = "abilities_grid">
             <div>
-                <label>STR</label>
+                <label class = "ability_label_large">STR</label>
             </div>
-            
             <div>
                 <input type = "text" name = "attr_str"/>
             </div>
-            
             <div>
-                <label>INT</label>
+                <label class = "small_label">Damage Mod</label>
+                <input type = "number" name = "attr_str_mod" disabled = "true" value = ""/>
             </div>
-            
+            <div>
+                <label class = "ability_label_large">INT</label>
+            </div>
             <div>
                 <input type = "text" name = "attr_int"/>
             </div>
-            
             <div>
-                <label>WIS</label>
+                <label class = "small_label">Skill Learning Mod</label>
+                <input type = "number" name = "attr_int_mod" disabled = "true" value = ""/>
             </div>
-            
+            <div>
+                <label class = "ability_label_large">WIS</label>
+            </div>
             <div>
                 <input type = "text" name = "attr_wis"/>
             </div>
-            
             <div>
-                <label>DEX</label>
+                <label class = "small_label">Skill Learning Mod</label>
+                <input type = "number" name = "attr_wis_mod" disabled = "true" value = ""/>
             </div>
-            
+            <div>
+                <label class = "ability_label_large">DEX</label>
+            </div>
             <div>
                 <input type = "text" name = "attr_dex"/>
             </div>
-            
             <div>
-                <label>CON</label>
+                <label class = "small_label">To-hit Mod</label>
+                <input type = "number" name = "attr_dex_mod" disabled = "true" value = ""/>
             </div>
-            
+            <div>
+                <label class = "ability_label_large">CON</label>
+            </div>
             <div>
                 <input type = "text" name = "attr_con"/>
             </div>
-            
             <div>
-                <label>LKS</label>
+                <label class = "small_label">Hit Point Mod</label>
+                <input type = "number" name = "attr_con_mod" disabled = "true" value = ""/>
             </div>
-            
+            <div>
+                <label class = "ability_label_large">LKS</label>
+            </div>
             <div>
                 <input type = "text" name = "attr_lks"/>
             </div>
-            
             <div>
-                <label>CHA</label>
+                <label class = "small_label">Rep/Fame Mod</label>
+                <input type = "number" name = "attr_lks_mod" disabled = "true" value = ""/>
             </div>
-            
+            <div>
+                <label class = "ability_label_large">CHA</label>
+            </div>
             <div>
                 <input type = "text" name = "attr_cha"/>
             </div>
-            
             <div>
-                <label>REP</label>
+                <label class = "small_label">Skill Learning Mod</label>
+                <input type = "number" name = "attr_cha_mod" disabled = "true" value = ""/>
             </div>
-            
+            <div>
+                <label class = "ability_label_large">REP</label>
+            </div>
             <div>
                 <input type = "text" name = "attr_rep"/>
             </div>
-            
             <div>
-                <label>FAME</label>
+                <label class = "small_label">Rep Points</label>
+                <input type = "number" name = "attr_rep_points"/>
             </div>
-            
+            <div>
+                <label class = "ability_label_large">FAME</label>
+            </div>
             <div>
                 <input type = "text" name = "attr_fame"/>
+            </div>
+            <div>
+                <label class = "small_label">Fame Category</label>
+                <input type = "text" name = "attr_fame_category" disabled = "true" value = ""/>
             </div>
         </div>
         
         <!--Accuracy and Speed-->
         <div class = "acc_speed">
             <label class = "grid_header">SPEED</label>
-            <input type = "text" name = "attr_speed">
+            <input type = "number" name = "attr_speed">
             <label class = "grid_header">ACCURACY</label>
-            <input type = "text" name = "attr_acc">
+            <input type = "number" name = "attr_acc">
         </div>
         
         <!--Hit Points-->
@@ -242,7 +261,6 @@
             <div>
                 <input type = "text" name = "attr_weapon_details">
             </div>
-            <button type = "roll" value = "/roll 1d20 + @{acc} + ?"></button>
         </div>
         
         <div class = "weapons_range">
@@ -287,6 +305,10 @@
             </div>
             <div>
                 <label>200'</label> <input type = "text" name = "attr_range_200">
+            </div>
+            <div>
+                <button type = "roll" value = "/roll 1d20 + @{acc}">Attack</button>
+                <button type = "roll" value = "/roll @{weapon_damage}" class = "roll_damage">Damage</button> 
             </div>
             <div>
                 <label>250'</label> <input type = "text" name = "attr_range_250">

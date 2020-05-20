@@ -46,136 +46,323 @@
 
 <hr/>
 
-<div class = "grid">
-    <div class = "abilities">
-        <h1>ABILITIES</h1> 
-    </div>
-    
-    <!--Abilities--> 
-    <div class = "abilities_grid">
-        <div>
-            <label>STR</label>
-        </div>
-        
-        <div>
-            <input type = "text" name = "attr_str"/>
-        </div>
-        
-        <div>
-            <label>INT</label>
-        </div>
-        
-        <div>
-            <input type = "text" name = "attr_int"/>
-        </div>
-        
-        <div>
-            <label>WIS</label>
-        </div>
-        
-        <div>
-            <input type = "text" name = "attr_wis"/>
-        </div>
-        
-        <div>
-            <label>DEX</label>
-        </div>
-        
-        <div>
-            <input type = "text" name = "attr_dex"/>
-        </div>
-        
-        <div>
-            <label>CON</label>
-        </div>
-        
-        <div>
-            <input type = "text" name = "attr_con"/>
-        </div>
-        
-        <div>
-            <label>LKS</label>
-        </div>
-        
-        <div>
-            <input type = "text" name = "attr_lks"/>
-        </div>
-        
-        <div>
-            <label>CHA</label>
-        </div>
-        
-        <div>
-            <input type = "text" name = "attr_cha"/>
-        </div>
-        
-        <div>
-            <label>REP</label>
-        </div>
-        
-        <div>
-            <input type = "text" name = "attr_rep"/>
-        </div>
-        
-        <div>
-            <label>FAME</label>
-        </div>
-        
-        <div>
-            <input type = "text" name = "attr_fame"/>
-        </div>
-    </div>
-    
-    <!--Hit Points-->
-    <div class = "HP_grid">
-        <div>
-            <label class = "grid_header">HIT POINTS</label>
-        </div>
-        
-        <div>
-            <input type = "text" name = "attr_current_hp" class = "current_hp"/>
-            <label class = "hp_dash">/</label>
-            <input type = "text" name = "attr_hp_max">
-        </div>
-    </div>
-    
-    <!--Money-->
-    <div class = "money_grid">
-        <label class = "grid_header">MONEY</label>
-        <input type = "text" name = "attr_money"/>
-    </div>
-    
-    <!--Skills--> 
-    <div class = "skills_grid">
-        <div class = "skills_header">
-            <label>S</label> 
-            <label>K</label>
-            <label>I</label>
-            <label>L</label>
-            <label>L</label>
-            <label>S</label>
-        </div>
-        
-        <div class = "skills_text_grid">
-            <label>Skill Name</label> 
-            <label>Tallies</label> 
-            <label>Mastery %</label>
-        </div>
-        
-        <div>
-            <fieldset class = "repeating_skills">
-                <input type = "text" name = "attr_skill_name" class = "skill_name"/>
-                <input type = "number" name = "attr_skill_tallies" class = "skill_tallies"/>
-                <input type = "text" name = "attr_skill_mastery" class = "skill_mastery"/>
-            </fieldset>
-        </div>
-    </div>
-    
-    <!--Items-->
-    <div class = "items_grid">
-        <label class = "grid_header">ITEMS</label>
-        <textarea name = "attr_items"></textarea>
-    </div>
+<div>
+    <button type="action" name="act_character">Character</button>
+    <button type="action" name="act_weapons">Weapons</button>
 </div>
 
-<textarea class = "big_box" name = "attr_random_stuff"></textarea>
+<input type='hidden' class='tabstoggle' name='attr_sheetTab'  value='character'/>
+    
+<div class = "character">
+    <div class = "grid">
+        <div class = "abilities">
+            <h1>ABILITIES</h1> 
+        </div>
+        
+        <!--Abilities--> 
+        <div class = "abilities_grid">
+            <div>
+                <label class = "ability_label_large">STR</label>
+            </div>
+            <div>
+                <input type = "text" name = "attr_str"/>
+            </div>
+            <div class = "mod_grid">
+                <label class = "small_label">Damage Mod</label>
+                <input type = "number" name = "attr_str_mod"/>
+            </div>
+            <div>
+                <label class = "ability_label_large">INT</label>
+            </div>
+            <div>
+                <input type = "text" name = "attr_int"/>
+            </div>
+            <div class = "mod_grid">
+                <label class = "small_label">Skill Learning Mod</label>
+                <input type = "number" name = "attr_int_mod"/>
+            </div>
+            <div>
+                <label class = "ability_label_large">WIS</label>
+            </div>
+            <div>
+                <input type = "text" name = "attr_wis"/>
+            </div>
+            <div class = "mod_grid">
+                <label class = "small_label">Skill Learning Mod</label>
+                <input type = "text" name = "attr_wis_mod"/>
+            </div>
+            <div>
+                <label class = "ability_label_large">DEX</label>
+            </div>
+            <div>
+                <input type = "text" name = "attr_dex"/>
+            </div>
+            <div class = "mod_grid">
+                <label class = "small_label">To-hit Mod</label>
+                <input type = "number" name = "attr_dex_mod"/>
+            </div>
+            <div>
+                <label class = "ability_label_large">CON</label>
+            </div>
+            <div>
+                <input type = "text" name = "attr_con"/>
+            </div>
+            <div class = "mod_grid">
+                <label class = "small_label">Hit Point Mod</label>
+                <input type = "number" name = "attr_con_mod"/>
+            </div>
+            <div>
+                <label class = "ability_label_large">LKS</label>
+            </div>
+            <div>
+                <input type = "text" name = "attr_lks"/>
+            </div>
+            <div class = "mod_grid">
+                <label class = "small_label">Rep/Fame Mod</label>
+                <input type = "number" name = "attr_lks_mod"/>
+            </div>
+            <div>
+                <label class = "ability_label_large">CHA</label>
+            </div>
+            <div>
+                <input type = "text" name = "attr_cha"/>
+            </div>
+            <div class = "mod_grid">
+                <label class = "small_label">Skill Learning Mod</label>
+                <input type = "number" name = "attr_cha_mod"/>
+            </div>
+            <div>
+                <label class = "ability_label_large">REP</label>
+            </div>
+            <div>
+                <input type = "text" name = "attr_rep"/>
+            </div>
+            <div class = "mod_grid">
+                <label class = "small_label">Rep Points</label>
+                <input type = "number" name = "attr_rep_points"/>
+            </div>
+            <div>
+                <label class = "ability_label_large">FAME</label>
+            </div>
+            <div>
+                <input type = "text" name = "attr_fame"/>
+            </div>
+            <div class = "mod_grid">
+                <label class = "small_label">Fame Category</label>
+                <input type = "text" name = "attr_fame_category"/>
+            </div>
+        </div>
+        
+        <!--Hit Points-->
+        <div class = "HP_grid">
+            <div>
+                <label class = "grid_header">HIT POINTS</label>
+            </div>
+            
+            <div>
+                <input type = "text" name = "attr_current_hp" class = "current_hp"/>
+                <label class = "hp_dash">/</label>
+                <input type = "text" name = "attr_hp_max">
+            </div>
+        </div>
+
+        <!--Money-->
+        <div class = "money_grid">
+            <label class = "grid_header">MONEY</label>
+            <input type = "text" name = "attr_money"/>
+        </div>
+        
+        <!--Skills--> 
+        <div class = "skills_grid">
+            <div class = "skills_header">
+                <label>S</label> 
+                <label>K</label>
+                <label>I</label>
+                <label>L</label>
+                <label>L</label>
+                <label>S</label>
+            </div>
+            
+            <div class = "skills_text_grid">
+                <label>Skill Name</label> 
+                <label>Tallies</label> 
+                <label>Mastery %</label>
+            </div>
+            
+            <div>
+                <fieldset class = "repeating_skills">
+                    <input type = "text" name = "attr_skill_name" class = "skill_name"/>
+                    <input type = "number" name = "attr_skill_tallies" class = "skill_tallies"/>
+                    <input type = "text" name = "attr_skill_mastery" class = "skill_mastery"/>
+                </fieldset>
+            </div>
+        </div>
+        
+        <!--Items-->
+        <div class = "items_grid">
+            <label class = "grid_header">ITEMS</label>
+            <textarea name = "attr_items"></textarea>
+        </div>
+    </div>
+    <textarea class = "big_box" name = "attr_random_stuff"></textarea>
+</div>
+
+<div class = "weapons">
+    <!--Accuracy and Speed-->
+    <div class = "acc_speed">
+        <div><label class = "grid_header">SPEED</label></div>
+        <div><input type = "number" name = "attr_speed"></div>
+        <div><label class = "grid_header">ACCURACY</label></div>
+        <div><input type = "number" name = "attr_acc"></div>
+    </div>
+        
+    <hr>
+        
+    <!--Weapons-->
+    <fieldset class = "repeating_weapons">
+        <div class = "weapons_bio">
+            <div>
+                <label>Weapon</label>   
+            </div>
+            <div>
+               <input type = "text" name = "attr_weapon_type"> 
+            </div>
+            <div>
+                <label>Draw Speed</label>  
+            </div>
+            <div>
+                <input type = "number" name = "attr_weapon_draw_speed">    
+            </div>
+            <div>
+                <label>Accuracy</label>
+            </div>
+            <div>
+               <input type = "number" name = "attr_weapon_accuracy"> 
+            </div>
+            <div>
+                <label>Damage/Shot</label> 
+            </div>
+            <div>
+                <input type = "text" class = "damage_per_shot" name = "attr_weapon_damage">
+            </div>
+            <div>
+                <label>Reload Speed</label> 
+            </div>
+            <div>
+                <input type = "number" name = "attr_weapon_reload_speed">
+            </div>
+            <div>
+                <label>Shots Fired</label> 
+            </div>
+            <div>
+                <input type = "number" name = "attr_weapon_shots_fired">
+            </div>
+            <div>
+                <label>Other Details</label>    
+            </div>
+            <div>
+                <input type = "text" name = "attr_weapon_details">
+            </div>
+        </div>
+        
+        <div class = "weapons_range">
+            <div class = "range_label">
+                <label>Range</label>
+            </div>
+            <div>
+                <label>5'</label> <input type = "text" name = "attr_range_5">
+            </div>
+            <div>
+                <label>10'</label> <input type = "text" name = "attr_range_10">
+            </div>
+            <div>
+                <label>15'</label> <input type = "text" name = "attr_range_15">
+            </div>
+            <div>
+                <label>20'</label> <input type = "text" name = "attr_range_20">
+            </div>
+            <div>
+                <label>25'</label> <input type = "text" name = "attr_range_25">
+            </div>
+            <div>
+                <label>30'</label> <input type = "text" name = "attr_range_30">
+            </div>
+            <div>
+                <label>40'</label> <input type = "text" name = "attr_range_40">
+            </div>
+            <div>
+                <label>50'</label> <input type = "text" name = "attr_range_50">
+            </div>
+            <div>
+                <label>70'</label> <input type = "text" name = "attr_range_70">
+            </div>
+            <div>
+                <label>90'</label> <input type = "text" name = "attr_range_90">
+            </div>
+            <div>
+                <label>120'</label> <input type = "text" name = "attr_range_120">
+            </div>
+            <div>
+                <label>150'</label> <input type = "text" name = "attr_range_150">
+            </div>
+            <div>
+                <label>200'</label> <input type = "text" name = "attr_range_200">
+            </div>
+            <div>
+                <button type = "roll" value = "/roll 1d20 + @{acc}">Attack</button>
+                <button type = "roll" value = "/roll @{weapon_damage} + @{str_mod}" class = "roll_damage">Damage</button> 
+            </div>
+            <div>
+                <label>250'</label> <input type = "text" name = "attr_range_250">
+            </div>
+            <div>
+                <label>300'</label> <input type = "text" name = "attr_range_300">
+            </div>
+            <div>
+                <label>350'</label> <input type = "text" name = "attr_range_350">
+            </div>
+            <div>
+                <label>400'</label> <input type = "text" name = "attr_range_400">
+            </div>
+            <div>
+                <label>450'</label> <input type = "text" name = "attr_range_450">
+            </div>
+            <div>
+                <label>500'</label> <input type = "text" name = "attr_range_500">
+            </div>
+            <div>
+                <label>600'</label> <input type = "text" name = "attr_range_600">
+            </div>
+            <div>
+                <label>700'</label> <input type = "text" name = "attr_range_700">
+            </div>
+            <div>
+                <label>800'</label> <input type = "text" name = "attr_range_800">
+            </div>
+            <div>
+                <label>900'</label> <input type = "text" name = "attr_range_900">
+            </div>
+            <div>
+                <label>1000'</label> <input type = "text" name = "attr_range_1000">
+            </div>
+            <div>
+                <label>1250'</label> <input type = "text" name = "attr_range_1250">
+            </div>
+            <div>
+                <label>1500'</label> <input type = "text" name = "attr_range_1500">
+            </div>
+        </div>
+        <hr>
+    </fieldset>
+</div>
+
+<script type="text/worker">
+    const buttonlist = ["character","weapons"];
+    buttonlist.forEach(button => {
+        on(`clicked:${button}`, function() {
+            setAttrs({
+                sheetTab: button
+            });
+        });
+    });
+</script>

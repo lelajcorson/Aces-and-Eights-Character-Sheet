@@ -8,6 +8,12 @@ input, label, textarea{
     font-family: "Playfair Display";
 }
 
+input{
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+}
+
 /*Tabs*/
 .sheet-character,
 .sheet-weapons{
@@ -27,9 +33,6 @@ input, label, textarea{
 
 .sheet-bio input{
     display: inline;
-    border-top: 0px;
-    border-right: 0px;
-    border-left: 0px;
     font-weight: bold;
     font-size: 15px;
     height: 20px;
@@ -92,6 +95,7 @@ h1{
     font-family: "Rye";
     padding:0px;
     margin: 0px;
+    text-align: center;
 }
 
 .sheet-grid_header{
@@ -102,41 +106,41 @@ h1{
 
 .sheet-grid{
     display: grid;
-    grid-template-columns: 236px 200px 400px;
+    grid-template-columns: 256px 180px 400px;
     grid-template-rows: 40px 50px 80px 95px 195px;
-    column-gap: 20px;
+    column-gap: 0px;
 }
 
 .sheet-abilities_grid{
     grid-row: 2/ span 4;
     grid-col: 1;
     display: grid;
-    grid-template-columns: 60px 60px 116px;
+    grid-template-columns: 70px 60px 116px;
     grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px;
-    column-gap: 5px;
+    column-gap: 3px;
     row-gap: 5px;
     justify-items: center;
+    align-items:center;
 }
 
 .sheet-ability_label_large{
-    font-size: 24px;
+    font-size: 22px;
     font-family: "Rye";
     align-self: end;
     padding: 2px;
+    margin-top: 10px;
+    justify-self: center;
 }
 
 .sheet-abilities_grid label + input{
     height: 20px;
-    margin: 1px;
+    width: 116px;
 }
 
 .sheet-abilities_grid input{
-    height: 21px;
+    height: 30px;
     width: 50px !important;
     align-self: start;
-}
-
-.sheet-abilities_grid div{
 }
 
 .sheet-small_label{
@@ -144,21 +148,42 @@ h1{
     margin-bottom: 1px;
     margin-top: 0px;
     padding: 0px;
+    display: block;
+    justify-self: center;
+    text-align: center;
+}
+
+.sheet-mod_grid{
+    display: grid;
+    grid-template-columns: 116px;
+    grid-template-rows: 20px 30px;
+    justify-items: center;
+}
+
+.sheet-acc_speed{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .sheet-acc_speed label{
     margin-top: 10px;
+    display: inline;
 }
 
 .sheet-acc_speed input{
-    margin-left: 55px;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
     font-size: 20px;
     width: 50px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    
 }
 
 .sheet-HP_grid label{
-    margin-top: 8px;
-    margin-bottom: 10px;
+
 }
 
 .sheet-hp_dash{
@@ -175,7 +200,7 @@ h1{
 }
 
 .sheet-current_hp{
-    margin-left: 27px;
+    margin-left: 9px;
     margin-right: 7px;
 }
 
@@ -186,7 +211,7 @@ h1{
 
 .sheet-money_grid input{
     font-size: 21px;
-    width: 200px;
+    width: 180px;
     text-align: center;
 }
 
@@ -257,6 +282,7 @@ h1{
 .sheet-items_grid textarea{
     resize: none;
     height: 200px;
+    width: 180px;
 }
 
 .sheet-weapons{

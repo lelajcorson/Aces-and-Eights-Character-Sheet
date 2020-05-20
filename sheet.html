@@ -67,7 +67,7 @@
             <div>
                 <input type = "text" name = "attr_str"/>
             </div>
-            <div>
+            <div class = "mod_grid">
                 <label class = "small_label">Damage Mod</label>
                 <input type = "number" name = "attr_str_mod" disabled = "true" value = ""/>
             </div>
@@ -77,7 +77,7 @@
             <div>
                 <input type = "text" name = "attr_int"/>
             </div>
-            <div>
+            <div class = "mod_grid">
                 <label class = "small_label">Skill Learning Mod</label>
                 <input type = "number" name = "attr_int_mod" disabled = "true" value = ""/>
             </div>
@@ -87,7 +87,7 @@
             <div>
                 <input type = "text" name = "attr_wis"/>
             </div>
-            <div>
+            <div class = "mod_grid">
                 <label class = "small_label">Skill Learning Mod</label>
                 <input type = "number" name = "attr_wis_mod" disabled = "true" value = ""/>
             </div>
@@ -97,7 +97,7 @@
             <div>
                 <input type = "text" name = "attr_dex"/>
             </div>
-            <div>
+            <div class = "mod_grid">
                 <label class = "small_label">To-hit Mod</label>
                 <input type = "number" name = "attr_dex_mod" disabled = "true" value = ""/>
             </div>
@@ -107,7 +107,7 @@
             <div>
                 <input type = "text" name = "attr_con"/>
             </div>
-            <div>
+            <div class = "mod_grid">
                 <label class = "small_label">Hit Point Mod</label>
                 <input type = "number" name = "attr_con_mod" disabled = "true" value = ""/>
             </div>
@@ -117,7 +117,7 @@
             <div>
                 <input type = "text" name = "attr_lks"/>
             </div>
-            <div>
+            <div class = "mod_grid">
                 <label class = "small_label">Rep/Fame Mod</label>
                 <input type = "number" name = "attr_lks_mod" disabled = "true" value = ""/>
             </div>
@@ -127,7 +127,7 @@
             <div>
                 <input type = "text" name = "attr_cha"/>
             </div>
-            <div>
+            <div class = "mod_grid">
                 <label class = "small_label">Skill Learning Mod</label>
                 <input type = "number" name = "attr_cha_mod" disabled = "true" value = ""/>
             </div>
@@ -137,7 +137,7 @@
             <div>
                 <input type = "text" name = "attr_rep"/>
             </div>
-            <div>
+            <div class = "mod_grid">
                 <label class = "small_label">Rep Points</label>
                 <input type = "number" name = "attr_rep_points"/>
             </div>
@@ -147,18 +147,10 @@
             <div>
                 <input type = "text" name = "attr_fame"/>
             </div>
-            <div>
+            <div class = "mod_grid">
                 <label class = "small_label">Fame Category</label>
                 <input type = "text" name = "attr_fame_category" disabled = "true" value = ""/>
             </div>
-        </div>
-        
-        <!--Accuracy and Speed-->
-        <div class = "acc_speed">
-            <label class = "grid_header">SPEED</label>
-            <input type = "number" name = "attr_speed">
-            <label class = "grid_header">ACCURACY</label>
-            <input type = "number" name = "attr_acc">
         </div>
         
         <!--Hit Points-->
@@ -216,6 +208,17 @@
 </div>
 
 <div class = "weapons">
+    
+    <!--Accuracy and Speed-->
+    <div class = "acc_speed">
+        <div><label class = "grid_header">SPEED</label></div>
+        <div><input type = "number" name = "attr_speed"></div>
+        <div><label class = "grid_header">ACCURACY</label></div>
+        <div><input type = "number" name = "attr_acc"></div>
+    </div>
+        
+    <hr>
+        
     <!--Weapons-->
     <fieldset class = "repeating_weapons">
         <div class = "weapons_bio">

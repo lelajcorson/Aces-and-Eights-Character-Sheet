@@ -69,7 +69,7 @@
             </div>
             <div class = "mod_grid">
                 <label class = "small_label">Damage Mod</label>
-                <input type = "number" name = "attr_str_mod" disabled = "true" value = ""/>
+                <input type = "number" name = "attr_str_mod"/>
             </div>
             <div>
                 <label class = "ability_label_large">INT</label>
@@ -79,7 +79,7 @@
             </div>
             <div class = "mod_grid">
                 <label class = "small_label">Skill Learning Mod</label>
-                <input type = "number" name = "attr_int_mod" disabled = "true" value = ""/>
+                <input type = "number" name = "attr_int_mod"/>
             </div>
             <div>
                 <label class = "ability_label_large">WIS</label>
@@ -89,7 +89,7 @@
             </div>
             <div class = "mod_grid">
                 <label class = "small_label">Skill Learning Mod</label>
-                <input type = "number" name = "attr_wis_mod" disabled = "true" value = ""/>
+                <input type = "text" name = "attr_wis_mod"/>
             </div>
             <div>
                 <label class = "ability_label_large">DEX</label>
@@ -99,7 +99,7 @@
             </div>
             <div class = "mod_grid">
                 <label class = "small_label">To-hit Mod</label>
-                <input type = "number" name = "attr_dex_mod" disabled = "true" value = ""/>
+                <input type = "number" name = "attr_dex_mod"/>
             </div>
             <div>
                 <label class = "ability_label_large">CON</label>
@@ -109,7 +109,7 @@
             </div>
             <div class = "mod_grid">
                 <label class = "small_label">Hit Point Mod</label>
-                <input type = "number" name = "attr_con_mod" disabled = "true" value = ""/>
+                <input type = "number" name = "attr_con_mod"/>
             </div>
             <div>
                 <label class = "ability_label_large">LKS</label>
@@ -119,7 +119,7 @@
             </div>
             <div class = "mod_grid">
                 <label class = "small_label">Rep/Fame Mod</label>
-                <input type = "number" name = "attr_lks_mod" disabled = "true" value = ""/>
+                <input type = "number" name = "attr_lks_mod"/>
             </div>
             <div>
                 <label class = "ability_label_large">CHA</label>
@@ -129,7 +129,7 @@
             </div>
             <div class = "mod_grid">
                 <label class = "small_label">Skill Learning Mod</label>
-                <input type = "number" name = "attr_cha_mod" disabled = "true" value = ""/>
+                <input type = "number" name = "attr_cha_mod"/>
             </div>
             <div>
                 <label class = "ability_label_large">REP</label>
@@ -149,7 +149,7 @@
             </div>
             <div class = "mod_grid">
                 <label class = "small_label">Fame Category</label>
-                <input type = "text" name = "attr_fame_category" disabled = "true" value = ""/>
+                <input type = "text" name = "attr_fame_category"/>
             </div>
         </div>
         
@@ -311,7 +311,7 @@
             </div>
             <div>
                 <button type = "roll" value = "/roll 1d20 + @{acc}">Attack</button>
-                <button type = "roll" value = "/roll @{weapon_damage}" class = "roll_damage">Damage</button> 
+                <button type = "roll" value = "/roll @{weapon_damage} + @{str_mod}" class = "roll_damage">Damage</button> 
             </div>
             <div>
                 <label>250'</label> <input type = "text" name = "attr_range_250">

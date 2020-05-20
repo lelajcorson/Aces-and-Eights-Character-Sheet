@@ -141,6 +141,7 @@ h1{
     height: 30px;
     width: 50px !important;
     align-self: start;
+    text-align: center;
 }
 
 .sheet-small_label{

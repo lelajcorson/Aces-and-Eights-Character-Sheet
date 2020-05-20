@@ -242,15 +242,7 @@ h1{
     margin-top: 10px;
 }
 
-.sheet-weapons_info_grid{
-    display: grid;
-    grid-template-columns: 800px;
-    grid-template-rows: 15px 200px;
-}
-
 .sheet-weapons_bio{
-    grid-col: 1;
-    grid-row: 1;
     display: flex;
     flex-wrap: wrap;
 }
@@ -268,19 +260,16 @@ textarea{
     font-size: 15px;
 }
 
-.sheet-grid_2{
-    display: grid;
-    grid-template-columns: 879px;
-    grid-template-rows: 700px;
-    margin-top: 10px;
+.sheet-repeating_weapons{
+    margin-bottom: 10px;
 }
 
-.sheet-grid_2 label{
+.sheet-weapons_bio label{
     font-family: "Playfair Display";
     font-size: 17px;
 }
 
-.sheet-grid_2 input{
+.sheet-weapons_bio input{
     margin-right: 15px;
     font-family: "Playfair Display";
     font-size: 15px;
@@ -313,8 +302,12 @@ textarea{
 
 .sheet-weapons_range input{
     width: 40px;
+    font-family: "Playfair Display";
+    font-size: 15px;
 }
 
 .sheet-weapons_range label{
     text-align: center;
+    font-family: "Playfair Display";
+    font-size: 17px;
 }

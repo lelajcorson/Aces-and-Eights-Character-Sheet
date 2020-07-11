@@ -49,9 +49,11 @@
 <div>
     <button type="action" name="act_character">Character</button>
     <button type="action" name="act_weapons">Weapons</button>
+    <button type = "action" name = "act_bio2">Bio/Other Info</button>
+    <button type = "action" name = "act_horses">Horses</button>
 </div>
 
-<input type='hidden' class='tabstoggle' name='attr_sheetTab'  value='character'/>
+<input type='hidden' class='tabstoggle' name='attr_sheetTab'  value='horses'/>
     
 <div class = "character">
     <div class = "grid">
@@ -69,7 +71,7 @@
             </div>
             <div class = "mod_grid">
                 <label class = "small_label">Damage Mod</label>
-                <input type = "number" name = "attr_str_mod"/>
+                <input type = "text" name = "attr_str_mod"/>
             </div>
             <div>
                 <label class = "ability_label_large">INT</label>
@@ -79,7 +81,7 @@
             </div>
             <div class = "mod_grid">
                 <label class = "small_label">Skill Learning Mod</label>
-                <input type = "number" name = "attr_int_mod"/>
+                <input type = "text" name = "attr_int_mod"/>
             </div>
             <div>
                 <label class = "ability_label_large">WIS</label>
@@ -99,7 +101,7 @@
             </div>
             <div class = "mod_grid">
                 <label class = "small_label">To-hit Mod</label>
-                <input type = "number" name = "attr_dex_mod"/>
+                <input type = "text" name = "attr_dex_mod"/>
             </div>
             <div>
                 <label class = "ability_label_large">CON</label>
@@ -109,7 +111,7 @@
             </div>
             <div class = "mod_grid">
                 <label class = "small_label">Hit Point Mod</label>
-                <input type = "number" name = "attr_con_mod"/>
+                <input type = "text" name = "attr_con_mod"/>
             </div>
             <div>
                 <label class = "ability_label_large">LKS</label>
@@ -119,7 +121,7 @@
             </div>
             <div class = "mod_grid">
                 <label class = "small_label">Rep/Fame Mod</label>
-                <input type = "number" name = "attr_lks_mod"/>
+                <input type = "text" name = "attr_lks_mod"/>
             </div>
             <div>
                 <label class = "ability_label_large">CHA</label>
@@ -129,7 +131,7 @@
             </div>
             <div class = "mod_grid">
                 <label class = "small_label">Skill Learning Mod</label>
-                <input type = "number" name = "attr_cha_mod"/>
+                <input type = "text" name = "attr_cha_mod"/>
             </div>
             <div>
                 <label class = "ability_label_large">REP</label>
@@ -139,7 +141,7 @@
             </div>
             <div class = "mod_grid">
                 <label class = "small_label">Rep Points</label>
-                <input type = "number" name = "attr_rep_points"/>
+                <input type = "text" name = "attr_rep_points"/>
             </div>
             <div>
                 <label class = "ability_label_large">FAME</label>
@@ -149,13 +151,13 @@
             </div>
             <div class = "mod_grid">
                 <label class = "small_label">Fame Category</label>
-                <input type = "text" name = "attr_fame_category"/>
+                <textarea name = "attr_fame_category" class = "fame_category"></textarea>
             </div>
         </div>
         
         <!--Hit Points-->
         <div class = "HP_grid">
-            <div>
+            <div class = "HP_header">
                 <label class = "grid_header">HIT POINTS</label>
             </div>
             
@@ -165,7 +167,7 @@
                 <input type = "text" name = "attr_hp_max">
             </div>
         </div>
-
+        
         <!--Money-->
         <div class = "money_grid">
             <label class = "grid_header">MONEY</label>
@@ -201,13 +203,14 @@
         <!--Items-->
         <div class = "items_grid">
             <label class = "grid_header">ITEMS</label>
-            <textarea name = "attr_items"></textarea>
+            <textarea name = "attr_items" id = "itemsInput"></textarea>
         </div>
     </div>
     <textarea class = "big_box" name = "attr_random_stuff"></textarea>
 </div>
 
 <div class = "weapons">
+    
     <!--Accuracy and Speed-->
     <div class = "acc_speed">
         <div><label class = "grid_header">SPEED</label></div>
@@ -249,7 +252,7 @@
                 <label>Reload Speed</label> 
             </div>
             <div>
-                <input type = "number" name = "attr_weapon_reload_speed">
+                <input type = "text" name = "attr_weapon_reload_speed" class = "reload_speed">
             </div>
             <div>
                 <label>Shots Fired</label> 
@@ -309,8 +312,14 @@
                 <label>200'</label> <input type = "text" name = "attr_range_200">
             </div>
             <div>
-                <button type = "roll" value = "/roll 1d20 + @{acc}">Attack</button>
-                <button type = "roll" value = "/roll @{weapon_damage} + @{str_mod}" class = "roll_damage">Damage</button> 
+                <button class = "weapons_button" type = "roll" value = "/roll 1d20 + @{acc} + ?{Range|5 Feet, @{range_5}|10 Feet, @{range_10}|15 Feet, @{range_10}|
+                20 Feet, @{range_20}|25 Feet, @{range_25}|30 Feet, @{range_30}|40 Feet, @{range_40}|50 Feet, @{range_50}|70 Feet, @{range_70}|
+                90 Feet, @{range_90}|120 Feet, @{range_120}|150 Feet, @{range_150}|200 Feet, @{range_200}|250 Feet, @{range_250}|300 Feet, @{range_300}|
+                350 Feet, @{range_350}|400 Feet, @{range_400}|450 Feet, @{range_450}|500 Feet, @{range_500}|600 Feet, @{range_600}|700 Feet, @{range_700}|
+                800 Feet, @{range_800}|900 Feet, @{range_900}|1000 Feet, @{range_1000}|1250 Feet, @{range_1250}|1500 Feet, @{range_1500}} + ?{Aiming|None, 0|
+                Steady Aim Pistol(+2), 3|Fire Deliberately Pistol(+4), 4|Careful Aim Pistol(+7), 7|Fire Deliberately Rifle(+4), 4|Careful Aim Rifle(+7), 7}"
+                >Attack</button>
+                <button class = "weapons_button" type = "roll" value = "/roll @{weapon_damage} + @{str_mod}" class = "roll_damage">Damage</button> 
             </div>
             <div>
                 <label>250'</label> <input type = "text" name = "attr_range_250">
@@ -356,8 +365,124 @@
     </fieldset>
 </div>
 
+<!--Bio/Other Info Page-->
+<div class = "bio2">
+    <div class = "talents">
+        <h1 class = "grid_header">TALENTS</h1>
+        
+    </div>
+</div>
+
+<div class = "horses">
+    <fieldset class = "repeating_horse">
+        <div class = "bio">
+            <div class = "name"> 
+                <label>Name</label><input type = "text" name = "attr_horse_name"/> 
+            </div>
+         
+            <div class = "breed">
+                <label>Breed</label><input type = "text" name = "attr_horse_breed"/>
+            </div>
+            
+            <div class = "vices"> 
+                <label>Vices</label><input type = "text" name = "attr_horse_vices"/>
+            </div>
+            
+            <div class = "markings">
+                <label>Markings</label><input type = "text" name = "attr_horse_markings"/>
+            </div>
+            
+            <div class = "horse_gender">
+                <label>Gender</label><input type = "text" name = "attr_horse_gender"/>
+            </div>
+            
+            <div class = "age"> 
+                <label>Age</label><input type = "number" name = "attr_horse_age"/>
+            </div>
+            
+            <div class = "horse_height">
+                <label>Height</label><input type = "text" name = "attr_horse_age"/>
+            </div>
+            
+            <div class = "personality">
+                <label>Personality</label><input type = "text" name = "attr_horse_personality"/>
+            </div>
+            
+            <div class = "color">
+                <label>Color</label><input type = "text" name = "attr_horse_color"/>
+            </div>
+            
+             <div class = "horse_HP">
+                <label>HP</label><input type = "text" name = "attr_horse_HP_current"><label>/</label><input type = "text" name = "attr_horse_HP_max">
+            </div>
+        </div>
+        
+        <div class = "horse_stats">
+            <h1 class = "header">STATS</h1>
+            <h1>NOTES/TACK</h1>
+            <div class = "horse_grid">
+                <div class = "horse_stats_grid">
+                    <div>
+                        <label>Short Speed</label><input type = text name = "attr_horse_short_speed">
+                    </div>
+                    
+                    <div>
+                        <label>Med Speed</label><input type = text name = "attr_horse_med_speed"> 
+                    </div>
+                    
+                    <div>
+                        <label>Long Speed</label><input type = text name = "attr_horse_long_speed"> 
+                    </div>
+                     
+                    <div>
+                        <label>Agility</label></label><input type = text name = "attr_horse_agility"> 
+                    </div>
+                    
+                    <div>
+                        <label>Endurance</label></label><input type = text name = "attr_horse_endurance"> 
+                    </div>
+                    
+                    <div>
+                        <label>Horse Sense</label></label><input type = text name = "attr_horse_endurance">
+                    </div>
+                    
+                    <div>
+                        <label>Temperment</label></label><input type = text name = "attr_horse_temperment"> 
+                    </div>
+                    
+                    <div>
+                        <label>Trainability</label></label><input type = text name = "attr_horse_trainability"> 
+                    </div>
+                    
+                    <div>
+                        <label>Mettle</label></label><input type = text name = "attr_horse_mettle">
+                    </div>
+                    
+                    <div>
+                        <label>Soundness</label></label><input type = text name = "attr_horse_soundness"> 
+                    </div>
+                    
+                    <div>
+                        <label>Strength</label></label><input type = text name = "attr_horse_strength">
+                    </div>
+                </div>
+                
+                <div>
+                    <textarea class = "horse_tack"></textarea>
+                </div>
+                
+            </div>
+        </div>
+    </fieldset>
+    
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+
 <script type="text/worker">
-    const buttonlist = ["character","weapons"];
+    const buttonlist = ["character","weapons", "bio2", "horses"];
     buttonlist.forEach(button => {
         on(`clicked:${button}`, function() {
             setAttrs({

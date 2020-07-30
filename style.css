@@ -279,7 +279,7 @@ h1{
 }
 
 .sheet-skills_text_grid input{
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     height: 31px;
 }
@@ -392,6 +392,26 @@ button{
 
 button.sheet-weapons_button:before{
     content: "" !important;
+}
+
+.sheet-bio2_grid{
+    display: grid;
+    grid-template-columns: 220px 40px 200px;
+    grid-template-rows: 200px;
+}
+
+.sheet-bio2_grid input{
+    height: 25px;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.sheet-bio2_quirks input{
+    width: 230px;
+}
+
+.sheet-bio2_quirks{
+    grid-column: 2 / span 2;
 }
 
 .sheet-breed input, .sheet-personality input{

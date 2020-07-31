@@ -397,7 +397,7 @@ button.sheet-weapons_button:before{
 .sheet-bio2_grid{
     display: grid;
     grid-template-columns: 220px 40px 200px 370px;
-    grid-template-rows: 200px;
+    grid-template-rows: 200px 200px;
 }
 
 .sheet-bio2_grid input{
@@ -416,6 +416,7 @@ button.sheet-weapons_button:before{
 
 .sheet-bio2_personal_goals{
     grid-column: 4;
+    grid-row: 1 / span 2;
 }
 
 .sheet-goals_flex{
@@ -430,6 +431,18 @@ button.sheet-weapons_button:before{
 .sheet-goal_BPs{
     width: 45px;
     text-align: center;
+}
+
+.sheet-bio2_profession{
+    grid-column: 1 / span 3;
+}
+
+.sheet-prof{
+    width: 390px;
+}
+
+.sheet-prof_BPs{
+    width: 50px;
 }
 
 .sheet-breed input, .sheet-personality input{

@@ -397,7 +397,7 @@ button.sheet-weapons_button:before{
 .sheet-bio2_grid{
     display: grid;
     grid-template-columns: 220px 130px 110px 370px;
-    grid-template-rows: 200px 200px 300px 200px;
+    grid-template-rows: 200px 200px 300px 250px;
 }
 
 .sheet-bio2_grid > div{
@@ -423,7 +423,7 @@ button.sheet-weapons_button:before{
     grid-row: 1 / span 2;
 }
 
-.sheet-goals_flex{
+.sheet-flex{
     display: flex;
     flex-wrap: flex;
 }
@@ -466,16 +466,30 @@ button.sheet-weapons_button:before{
 
 .sheet-backstory_text{
     width: 450px;
-    height: 250px;
+    height:250px;
     margin-left: 10px;
     resize: none;
 }
 
-.sheet-notes_text{
-    width: 350px;
-    height: 150px;
-    resize: none;
+.sheet-wounds_points{
+    width: 60px;
 }
+
+.sheet-wounds_days{
+    width: 60px;
+}
+
+.sheet-wounds label{
+    width: auto;
+}
+
+.sheet-notes_text{
+    width: 340px;
+    height: 200px;
+    resize: none;
+    margin-left: 10px;
+}
+
 
 .sheet-wounds{
     grid-column: 1 / span 3;

@@ -396,8 +396,8 @@ button.sheet-weapons_button:before{
 
 .sheet-bio2_grid{
     display: grid;
-    grid-template-columns: 220px 40px 200px 370px;
-    grid-template-rows: 200px 200px;
+    grid-template-columns: 220px 130px 110px 370px;
+    grid-template-rows: 200px 200px 300px;
 }
 
 .sheet-bio2_grid input{
@@ -410,13 +410,19 @@ button.sheet-weapons_button:before{
     width: 230px;
 }
 
+.sheet-bio2_talents{
+    border: 1px solid black;
+}
+
 .sheet-bio2_quirks{
     grid-column: 2 / span 2;
+    border: 1px solid black;
 }
 
 .sheet-bio2_personal_goals{
     grid-column: 4;
     grid-row: 1 / span 2;
+    border: 1px solid black;
 }
 
 .sheet-goals_flex{
@@ -435,6 +441,7 @@ button.sheet-weapons_button:before{
 
 .sheet-bio2_profession{
     grid-column: 1 / span 3;
+    border: 1px solid black;
 }
 
 .sheet-prof{
@@ -443,6 +450,17 @@ button.sheet-weapons_button:before{
 
 .sheet-prof_BPs{
     width: 50px;
+}
+
+.sheet-personality{
+    grid-column: 1 / span 2;
+}
+
+.sheet-personality_text{
+    width: 320px;
+    height: 250px;
+    margin-left: 10px;
+    resize: none;
 }
 
 .sheet-breed input, .sheet-personality input{

@@ -186,9 +186,6 @@ h1{
 }
 
 .sheet-acc_speed input{
-    border-top: 0px;
-    border-right: 0px;
-    border-left: 0px;
     font-size: 20px;
     width: 50px;
     margin-right: 10px;
@@ -490,6 +487,9 @@ button.sheet-weapons_button:before{
     margin-left: 10px;
 }
 
+.sheet-notes{
+    height: 250px;
+}
 
 .sheet-wounds{
     grid-column: 1 / span 3;

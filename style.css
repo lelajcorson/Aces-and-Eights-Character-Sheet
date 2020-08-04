@@ -394,7 +394,7 @@ button.sheet-weapons_button:before{
 .sheet-bio2_grid{
     display: grid;
     grid-template-columns: 220px 130px 110px 370px;
-    grid-template-rows: 200px 200px 300px 250px;
+    grid-template-rows: 200px 200px 300px auto;
 }
 
 .sheet-bio2_grid > div{

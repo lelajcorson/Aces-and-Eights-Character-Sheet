@@ -193,6 +193,10 @@ h1{
     
 }
 
+.sheet-speed_mods_hidden{
+    display:none;
+}
+
 .sheet-HP_header label{
     margin-top: 7px;
 }
@@ -248,7 +252,7 @@ h1{
 }
 
 .sheet-skills_text_grid label{
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .sheet-skills_header{
@@ -263,8 +267,12 @@ h1{
     display: inline;
 }
 
+.sheet-skills_grid input{
+    font-size: 15px;
+}
+
 .sheet-skill_name{
-    width: 200px;
+    width: 195px;
 }
 
 .sheet-skill_tallies{
@@ -272,17 +280,7 @@ h1{
 }
 
 .sheet-skill_mastery{
-    width: 100px;
-}
-
-.sheet-skills_text_grid input{
-    font-size: 20px;
-    font-weight: bold;
-    height: 31px;
-}
-
-.sheet-skills_repeating{
-    margin-top: 0px;
+    width: 70px;
 }
 
 .sheet-items_grid{
@@ -394,7 +392,7 @@ button.sheet-weapons_button:before{
 .sheet-bio2_grid{
     display: grid;
     grid-template-columns: 220px 130px 110px 370px;
-    grid-template-rows: 200px 200px 300px 250px;
+    grid-template-rows: 200px 200px 300px auto;
 }
 
 .sheet-bio2_grid > div{
@@ -554,4 +552,9 @@ button.sheet-weapons_button:before{
 .sheet-horse_tack{
     height: 110px;
     resize: none;
+}
+
+.sheet-rolltemplate-skills{
+    background-color: white;
+    font-size: 25px;
 }

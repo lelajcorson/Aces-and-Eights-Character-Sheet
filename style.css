@@ -555,13 +555,14 @@ button.sheet-weapons_button:before{
 }
 
 .sheet-rolltemplate-skills{
-    background: url(https://github.com/lelajcorson/Aces-and-Eights-Character-Sheet/blob/skills-rolltemplate/roll_border_small.png?raw=true) top left;
-    background-size: 230px 104px;
-    background-repeat: none;
+    background: url(https://github.com/lelajcorson/Aces-and-Eights-Character-Sheet/blob/skills-rolltemplate/roll_border.png?raw=true) top left;
+    background-size: 195px 104px;
+    background-repeat: no-repeat;
     font-size: 15px;
-    height: 100px;
+    height: 104px;
+    width: 195px;
     text-align: center;
-    line-height: 1.5;
+    font-family: "Playfair Display";
 }
 
 .sheet-rolltemplate-skills .sheet-roll_numbers span{
@@ -569,17 +570,38 @@ button.sheet-weapons_button:before{
     border: none;
     font-size: 30px;
     margin-top: 25px;
-    line-height: 1.5;
+    line-height: 1.3;
     text-align: right;
     font-weight: bold;
     margin-left: 2px;
     margin-right: 2px;
 }
 
+.sheet-rolltemplate-skills .sheet-roll_numbers{
+    padding-top: 10px;
+}
+
 .sheet-rolltemplate-skills .sheet-roll_mastery_text{
-    padding-left: 1.7em;
+    margin-left: 3.3em;
 }
 
 .sheet-rolltemplate-skills .sheet-roll_text{
-    margin-left: 1.4em;
+    margin-left: 2.5em;
+}
+
+.sheet-rolltemplate-skills .sheet-roll_labels{
+    text-align: left;
+}
+
+.sheet-rolltemplate-skills .sheet-roll_name{
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.sheet-rolltemplate-skills .sheet-roll_numbers .sheet-roll{
+    margin-right: 55px;
+}
+
+.sheet-rolltemplate-skills .sheet-roll_numbers .sheet-roll_mastery{
+    margin-right: 10px;
 }

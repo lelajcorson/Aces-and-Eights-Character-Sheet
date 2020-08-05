@@ -555,19 +555,31 @@ button.sheet-weapons_button:before{
 }
 
 .sheet-rolltemplate-skills{
-    background-color: white;
+    background: url(https://github.com/lelajcorson/Aces-and-Eights-Character-Sheet/blob/skills-rolltemplate/roll_border_small.png?raw=true) top left;
+    background-size: 230px 104px;
+    background-repeat: none;
     font-size: 15px;
     height: 100px;
     text-align: center;
+    line-height: 1.5;
 }
 
 .sheet-rolltemplate-skills .sheet-roll_numbers span{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     border: none;
     font-size: 30px;
     margin-top: 25px;
-    line-height: 2;
+    line-height: 1.5;
+    text-align: right;
+    font-weight: bold;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
-.sheet-rolltemplate-skills .sheet-roll{
+.sheet-rolltemplate-skills .sheet-roll_mastery_text{
+    padding-left: 1.7em;
+}
+
+.sheet-rolltemplate-skills .sheet-roll_text{
+    margin-left: 1.4em;
 }

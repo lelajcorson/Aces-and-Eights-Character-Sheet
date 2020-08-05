@@ -1,5 +1,5 @@
 <!-- Logo-->
-<img src="https://github.com/lelajcorson/Aces-and-Eights-Character-Sheet/blob/master/logo.jpg?raw=true" />
+<img src="https://github.com/lelajcorson/Aces-and-Eights-Character-Sheet/blob/master/logo.jpg?raw=true"/>
 
 <!--Bio-->
 <div class = "bio">
@@ -196,7 +196,7 @@
                     <input type = "text" class = "skill_name" name = "attr_skill_name"/>
                     <input type = "number" class = "skill_tallies" name = "attr_skill_tallies"/>
                     <input type = "text" class = "skill_mastery" name = "attr_skill_mastery"/>
-                    <button class = "skills_button" type = "roll" value = "&{template:skills} {{roll=[[1d100]]}} {{mastery=@{skill_mastery}}}{{name=Test Attack}}"></button>
+                    <button class = "skills_button" type = "roll" value = "&{template:skills} {{roll=[[1d100]]}} {{mastery=@{skill_mastery}}}{{name=@{skill_name}}}"></button>
                 </fieldset>
             </div>
         </div>
@@ -724,12 +724,12 @@
 <rolltemplate class="sheet-rolltemplate-skills">
     <div class="sheet-container">
         <div class="sheet-roll_numbers">
-            <span class = "sheet-roll">{{roll}} | </span>
+            <span class = "sheet-roll">{{roll}}   </span>
             <span class = "sheet-roll_mastery">{{mastery}}</span>
         </div>
         <div class="sheet-roll_labels">
-            <span>Roll</span>
-            <span>Mastery</span>
+            <span class = "sheet-roll_text">Roll</span>
+            <span class = "sheet-roll_mastery_text">Mastery</span>
         </div>
         <div><span>{{name}}</span></div>
     </div>

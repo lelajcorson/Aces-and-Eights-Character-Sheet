@@ -556,5 +556,18 @@ button.sheet-weapons_button:before{
 
 .sheet-rolltemplate-skills{
     background-color: white;
-    font-size: 25px;
+    font-size: 15px;
+    height: 100px;
+    text-align: center;
+}
+
+.sheet-rolltemplate-skills .sheet-roll_numbers span{
+    background-color: white;
+    border: none;
+    font-size: 30px;
+    margin-top: 25px;
+    line-height: 2;
+}
+
+.sheet-rolltemplate-skills .sheet-roll{
 }

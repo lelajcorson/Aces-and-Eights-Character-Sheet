@@ -604,3 +604,11 @@ button.sheet-weapons_button:before{
 .sheet-rolltemplate-damage .sheet-roll_name span{
     line-height: 2;
 }
+
+.sheet-rolltemplate-damage .sheet-roll_numbers span .inlinerollresult.fullfail {
+    color: red;
+}
+
+.sheet-rolltemplate-damage .sheet-roll_numbers span .inlinerollresult.fullcrit {
+    color: green;
+}

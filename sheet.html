@@ -328,7 +328,8 @@
                 1500 Feet, @{range_1500}} + ?{Aiming|None, 0|Steady Aim Pistol, 3|Fire Deliberately Pistol, 4|
                 Careful Aim Pistol, 7|Fire Deliberately Rifle, 4|Careful Aim Rifle, 7}]]}} {{damage=[[@{weapon_damage} + @{str_mod}]]}} {{weapon=@{weapon_type}}}"
                 >Attack</button>
-                <button class = "weapons_button" type = "roll" value = "&{template:damage} {{damage=[[@{weapon_damage} + @{str_mod}]]}} {{weapon=@{weapon_type}}}">Damage</button> 
+                <button class = "weapons_button" type = "roll" value = "&{template:damage} {{damage=[[(@{weapon_damage}) * ?{Number of Shots|1, 1|2, 2|3, 3|4, 4|5, 5|
+                6, 6|7, 7|8, 8|9, 9|10, 10} + @{str_mod}]]}} {{weapon=@{weapon_type}}}">Damage</button> 
             </div>
             <div>
                 <label>250'</label> <input type = "text" name = "attr_range_250">

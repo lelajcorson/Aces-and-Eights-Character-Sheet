@@ -724,21 +724,31 @@
 
 
 <rolltemplate class="sheet-rolltemplate-skills">
-    <div class="sheet-container">
+    <div class = "sheet-roll_grid">
         <div class="sheet-roll_numbers">
             <span class = "sheet-roll">{{roll}}</span>
+        </div>
+        
+        <div class = "sheet-roll_numbers">
             <span class = "sheet-roll_mastery">{{mastery}}</span>
         </div>
+        
         <div class="sheet-roll_labels">
             <span class = "sheet-roll_text">Roll</span>
+        </div>
+        
+        <div class = "sheet-roll_labels">
             <span class = "sheet-roll_mastery_text">Mastery</span>
         </div>
-        <div class="sheet-roll_name"><span>{{name}}</span></div>
+        
+        <div class="sheet-roll_name">
+            <span>{{name}}</span>
+        </div>    
     </div>
 </rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-attack">
-    <div class="sheet-container">
+    <div class = "sheet-roll_grid">
         <div class="sheet-roll_numbers">
             <span class = "sheet-roll">{{roll}}</span>
             <span class = "sheet-roll_damage">{{damage}}</span>
@@ -747,8 +757,15 @@
             <span class = "sheet-roll_text">Roll</span>
             <span class = "sheet-roll_damage_text">Damage</span>
         </div>
-        <div class="sheet-roll_name"><span>{{weapon}}</span></div>
+        <div class="sheet-roll_name"><span>{{weapon}}</span></div>    
     </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-damage">
+    <div class = "sheet-damage">
+        <span class = 
+    </div>
+    <div class = "sheet-roll_name"><span>{{weapon}}</span></div>
 </rolltemplate>
 
 

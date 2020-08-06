@@ -565,18 +565,36 @@ button.sheet-weapons_button:before{
     font-family: "Playfair Display";
 }
 
+.sheet-rolltemplate-skills .sheet-roll_grid, .sheet-rolltemplate-attack .sheet-roll_grid{
+    display: grid;
+    grid-template-columns: 92px 92px;
+    grid-template-rows: 42px 20px 26px;
+    margin-left: 5px;
+    padding-top: 10px;
+}
+
 .sheet-rolltemplate-skills .sheet-roll_numbers span, .sheet-rolltemplate-attack .sheet-roll_numbers span{
     background-color: rgba(255, 255, 255, 0);
     border: none;
     font-size: 30px;
-    margin-top: 25px;
     line-height: 1.3;
-    text-align: right;
+    text-align: center;
     font-weight: bold;
-    margin-left: 2px;
-    margin-right: 2px;
 }
 
+.sheet-rolltemplate-skills .sheet-roll_name{
+    grid-column: 1 / span 2;
+}
+
+/*.sheet-rolltemplate-skills .sheet-roll_numbers{
+    background: red;
+}
+
+.sheet-rolltemplate-skills .sheet-roll_labels{
+    background: green;
+}*/
+
+/*
 .sheet-rolltemplate-skills .sheet-roll_numbers, .sheet-rolltemplate-attack .sheet-roll_numbers{
     padding-top: 10px;
 }
@@ -598,10 +616,18 @@ button.sheet-weapons_button:before{
     font-size: 16px;
 }
 
-.sheet-rolltemplate-skills .sheet-roll_numbers .sheet-roll, .sheet-rolltemplate-attack .sheet-roll_numbers .sheet-roll{
-    margin-right: 55px;
+.sheet-rolltemplate-skills .sheet-roll_numbers .sheet-roll{
+    margin-right: 60px;
 }
 
-.sheet-rolltemplate-skills .sheet-roll_numbers .sheet-roll_mastery, .sheet-rolltemplate-attack .sheet-roll_numbers .sheet-roll_damage{
-    margin-right: 10px;
+.sheet-rolltemplate-skills .sheet-roll_numbers .sheet-roll_mastery{
+    margin-right: 5px;
 }
+
+.sheet-rolltemplate-attack .sheet-roll_numbers .sheet-roll{
+    margin-right: 70px;   
+}    
+
+.sheet-rolltemplate-attack .sheet-roll_numbers .sheet-roll_damage{
+    margin-right: 7px;
+}*/

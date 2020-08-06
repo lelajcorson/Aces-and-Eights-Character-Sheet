@@ -575,7 +575,7 @@ button.sheet-weapons_button:before{
 
 .sheet-rolltemplate-skills .sheet-roll_numbers span, .sheet-rolltemplate-attack .sheet-roll_numbers span, .sheet-rolltemplate-damage .sheet-roll_numbers span{
     background-color: rgba(255, 255, 255, 0);
-    border: none;
+    border: 2px solid transparent !important;
     font-size: 30px;
     line-height: 1.3;
     text-align: center;

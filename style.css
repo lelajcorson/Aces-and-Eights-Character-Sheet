@@ -582,52 +582,6 @@ button.sheet-weapons_button:before{
     font-weight: bold;
 }
 
-.sheet-rolltemplate-skills .sheet-roll_name{
+.sheet-rolltemplate-skills .sheet-roll_name, .sheet-rolltemplate-attack .sheet-roll_name{
     grid-column: 1 / span 2;
 }
-
-/*.sheet-rolltemplate-skills .sheet-roll_numbers{
-    background: red;
-}
-
-.sheet-rolltemplate-skills .sheet-roll_labels{
-    background: green;
-}*/
-
-/*
-.sheet-rolltemplate-skills .sheet-roll_numbers, .sheet-rolltemplate-attack .sheet-roll_numbers{
-    padding-top: 10px;
-}
-
-.sheet-rolltemplate-skills .sheet-roll_mastery_text, .sheet-rolltemplate-attack .sheet-roll_damage_text{
-    margin-left: 3.3em;
-}
-
-.sheet-rolltemplate-skills .sheet-roll_text, .sheet-rolltemplate-attack .sheet-roll_text{
-    margin-left: 2.5em;
-}
-
-.sheet-rolltemplate-skills .sheet-roll_labels, .sheet-rolltemplate-attack .sheet-roll_labels{
-    text-align: left;
-}
-
-.sheet-rolltemplate-skills .sheet-roll_name, .sheet-rolltemplate-attack .sheet-roll_name{
-    line-height: 1.6;
-    font-size: 16px;
-}
-
-.sheet-rolltemplate-skills .sheet-roll_numbers .sheet-roll{
-    margin-right: 60px;
-}
-
-.sheet-rolltemplate-skills .sheet-roll_numbers .sheet-roll_mastery{
-    margin-right: 5px;
-}
-
-.sheet-rolltemplate-attack .sheet-roll_numbers .sheet-roll{
-    margin-right: 70px;   
-}    
-
-.sheet-rolltemplate-attack .sheet-roll_numbers .sheet-roll_damage{
-    margin-right: 7px;
-}*/

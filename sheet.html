@@ -320,12 +320,13 @@
                 <label>200'</label> <input type = "text" name = "attr_range_200">
             </div>
             <div>
-                <button class = "weapons_button" type = "roll" value = "/roll 1d20 + @{acc} + ?{Range|5 Feet, @{range_5}|10 Feet, @{range_10}|15 Feet, @{range_10}|
-                20 Feet, @{range_20}|25 Feet, @{range_25}|30 Feet, @{range_30}|40 Feet, @{range_40}|50 Feet, @{range_50}|70 Feet, @{range_70}|
-                90 Feet, @{range_90}|120 Feet, @{range_120}|150 Feet, @{range_150}|200 Feet, @{range_200}|250 Feet, @{range_250}|300 Feet, @{range_300}|
-                350 Feet, @{range_350}|400 Feet, @{range_400}|450 Feet, @{range_450}|500 Feet, @{range_500}|600 Feet, @{range_600}|700 Feet, @{range_700}|
-                800 Feet, @{range_800}|900 Feet, @{range_900}|1000 Feet, @{range_1000}|1250 Feet, @{range_1250}|1500 Feet, @{range_1500}} + ?{Aiming|None, 0|
-                Steady Aim Pistol(+2), 3|Fire Deliberately Pistol(+4), 4|Careful Aim Pistol(+7), 7|Fire Deliberately Rifle(+4), 4|Careful Aim Rifle(+7), 7}"
+                <button class = "weapons_button" type = "roll" value = "&{template:attack} {{roll=[[1d20 + @{acc} + ?{Range|5 Feet, @{range_5}|
+                10 Feet, @{range_10}|15 Feet, @{range_10}|20 Feet, @{range_20}|25 Feet, @{range_25}|30 Feet, @{range_30}|40 Feet, @{range_40}|
+                50 Feet, @{range_50}|70 Feet, @{range_70}|90 Feet, @{range_90}|120 Feet, @{range_120}|150 Feet, @{range_150}|200 Feet, @{range_200}|
+                250 Feet, @{range_250}|300 Feet, @{range_300}|350 Feet, @{range_350}|400 Feet, @{range_400}|450 Feet, @{range_450}|500 Feet, @{range_500}|
+                600 Feet, @{range_600}|700 Feet, @{range_700}|800 Feet, @{range_800}|900 Feet, @{range_900}|1000 Feet, @{range_1000}|1250 Feet, @{range_1250}|
+                1500 Feet, @{range_1500}} + ?{Aiming|None, 0|Steady Aim Pistol, 3|Fire Deliberately Pistol, 4|
+                Careful Aim Pistol, 7|Fire Deliberately Rifle, 4|Careful Aim Rifle, 7}]]}} {{damage=[[@{weapon_damage} + @{str_mod}]]}} {{weapon=@{weapon_type}}}"
                 >Attack</button>
                 <button class = "weapons_button" type = "roll" value = "/roll @{weapon_damage} + @{str_mod}">Damage</button> 
             </div>
@@ -721,6 +722,7 @@
     </fieldset>
 </div>
 
+
 <rolltemplate class="sheet-rolltemplate-skills">
     <div class="sheet-container">
         <div class="sheet-roll_numbers">
@@ -735,6 +737,19 @@
     </div>
 </rolltemplate>
 
+<rolltemplate class="sheet-rolltemplate-attack">
+    <div class="sheet-container">
+        <div class="sheet-roll_numbers">
+            <span class = "sheet-roll">{{roll}}</span>
+            <span class = "sheet-roll_mastery">{{damage}}</span>
+        </div>
+        <div class="sheet-roll_labels">
+            <span class = "sheet-roll_text">Roll</span>
+            <span class = "sheet-roll_mastery_text">Damage</span>
+        </div>
+        <div class="sheet-roll_name"><span>{{weapon}}</span></div>
+    </div>
+</rolltemplate>
 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

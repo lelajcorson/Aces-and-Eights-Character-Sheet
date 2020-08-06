@@ -193,6 +193,10 @@ h1{
     
 }
 
+.sheet-speed_mods_hidden{
+    display:none;
+}
+
 .sheet-HP_header label{
     margin-top: 7px;
 }
@@ -248,7 +252,7 @@ h1{
 }
 
 .sheet-skills_text_grid label{
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .sheet-skills_header{
@@ -263,8 +267,12 @@ h1{
     display: inline;
 }
 
+.sheet-skills_grid input{
+    font-size: 15px;
+}
+
 .sheet-skill_name{
-    width: 200px;
+    width: 195px;
 }
 
 .sheet-skill_tallies{
@@ -272,17 +280,7 @@ h1{
 }
 
 .sheet-skill_mastery{
-    width: 100px;
-}
-
-.sheet-skills_text_grid input{
-    font-size: 20px;
-    font-weight: bold;
-    height: 31px;
-}
-
-.sheet-skills_repeating{
-    margin-top: 0px;
+    width: 70px;
 }
 
 .sheet-items_grid{
@@ -554,4 +552,63 @@ button.sheet-weapons_button:before{
 .sheet-horse_tack{
     height: 110px;
     resize: none;
+}
+
+.sheet-rolltemplate-skills, .sheet-rolltemplate-attack{
+    background: url(https://github.com/lelajcorson/Aces-and-Eights-Character-Sheet/blob/skills-rolltemplate/roll_border.png?raw=true) top left;
+    background-size: 195px 104px;
+    background-repeat: no-repeat;
+    font-size: 15px;
+    height: 104px;
+    width: 195px;
+    text-align: center;
+    font-family: "Playfair Display";
+}
+
+.sheet-rolltemplate-skills .sheet-roll_grid, .sheet-rolltemplate-attack .sheet-roll_grid, .sheet-rolltemplate-damage .sheet-roll_grid{
+    display: grid;
+    grid-template-columns: 92px 92px;
+    grid-template-rows: 42px 20px 26px;
+    margin-left: 5px;
+    padding-top: 10px;
+}
+
+.sheet-rolltemplate-skills .sheet-roll_numbers span, .sheet-rolltemplate-attack .sheet-roll_numbers span, .sheet-rolltemplate-damage .sheet-roll_numbers span{
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid transparent !important;
+    font-size: 30px;
+    line-height: 1.3;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sheet-rolltemplate-skills .sheet-roll_name, .sheet-rolltemplate-attack .sheet-roll_name{
+    grid-column: 1 / span 2;
+}
+
+.sheet-rolltemplate-damage{
+    background: url(https://github.com/lelajcorson/Aces-and-Eights-Character-Sheet/blob/skills-rolltemplate/damage_rolltemplate_border.png?raw=true);
+    background-size: 195px 104px;
+    background-repeat: no-repeat;
+    font-size: 15px;
+    height: 104px;
+    width: 195px;
+    text-align: center;
+    font-family: "Playfair Display";
+}
+
+.sheet-rolltemplate-damage .sheet-roll_numbers{
+    padding-top: 10px;
+}
+
+.sheet-rolltemplate-damage .sheet-roll_name span{
+    line-height: 2;
+}
+
+.sheet-rolltemplate-damage .sheet-roll_numbers span .inlinerollresult.fullfail {
+    color: red;
+}
+
+.sheet-rolltemplate-damage .sheet-roll_numbers span .inlinerollresult.fullcrit {
+    color: green;
 }

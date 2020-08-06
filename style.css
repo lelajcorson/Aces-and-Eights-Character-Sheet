@@ -565,7 +565,7 @@ button.sheet-weapons_button:before{
     font-family: "Playfair Display";
 }
 
-.sheet-rolltemplate-skills .sheet-roll_grid, .sheet-rolltemplate-attack .sheet-roll_grid{
+.sheet-rolltemplate-skills .sheet-roll_grid, .sheet-rolltemplate-attack .sheet-roll_grid, .sheet-rolltemplate-damage .sheet-roll_grid{
     display: grid;
     grid-template-columns: 92px 92px;
     grid-template-rows: 42px 20px 26px;
@@ -573,7 +573,7 @@ button.sheet-weapons_button:before{
     padding-top: 10px;
 }
 
-.sheet-rolltemplate-skills .sheet-roll_numbers span, .sheet-rolltemplate-attack .sheet-roll_numbers span{
+.sheet-rolltemplate-skills .sheet-roll_numbers span, .sheet-rolltemplate-attack .sheet-roll_numbers span, .sheet-rolltemplate-damage .sheet-roll_numbers span{
     background-color: rgba(255, 255, 255, 0);
     border: none;
     font-size: 30px;
@@ -584,4 +584,23 @@ button.sheet-weapons_button:before{
 
 .sheet-rolltemplate-skills .sheet-roll_name, .sheet-rolltemplate-attack .sheet-roll_name{
     grid-column: 1 / span 2;
+}
+
+.sheet-rolltemplate-damage{
+    background: url(https://github.com/lelajcorson/Aces-and-Eights-Character-Sheet/blob/skills-rolltemplate/damage_rolltemplate_border.png?raw=true);
+    background-size: 195px 104px;
+    background-repeat: no-repeat;
+    font-size: 15px;
+    height: 104px;
+    width: 195px;
+    text-align: center;
+    font-family: "Playfair Display";
+}
+
+.sheet-rolltemplate-damage .sheet-roll_numbers{
+    padding-top: 10px;
+}
+
+.sheet-rolltemplate-damage .sheet-roll_name span{
+    line-height: 2;
 }

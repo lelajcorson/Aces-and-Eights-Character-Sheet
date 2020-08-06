@@ -328,7 +328,7 @@
                 1500 Feet, @{range_1500}} + ?{Aiming|None, 0|Steady Aim Pistol, 3|Fire Deliberately Pistol, 4|
                 Careful Aim Pistol, 7|Fire Deliberately Rifle, 4|Careful Aim Rifle, 7}]]}} {{damage=[[@{weapon_damage} + @{str_mod}]]}} {{weapon=@{weapon_type}}}"
                 >Attack</button>
-                <button class = "weapons_button" type = "roll" value = "/roll @{weapon_damage} + @{str_mod}">Damage</button> 
+                <button class = "weapons_button" type = "roll" value = "&{template:damage} {{damage=[[@{weapon_damage} + @{str_mod}]]}} {{weapon=@{weapon_type}}}">Damage</button> 
             </div>
             <div>
                 <label>250'</label> <input type = "text" name = "attr_range_250">
@@ -772,12 +772,18 @@
 </rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-damage">
-    <div class = "sheet-damage">
-        <span class = 
+    <div class = "sheet-roll_numbers">
+        <span>{{damage}}</span>
     </div>
-    <div class = "sheet-roll_name"><span>{{weapon}}</span></div>
+    
+    <div class = "sheet-roll_labels">
+        <span>Damage</span>
+    </div>
+    
+    <div class="sheet-roll_name">
+        <span>{{weapon}}</span>
+    </div>    
 </rolltemplate>
-
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 

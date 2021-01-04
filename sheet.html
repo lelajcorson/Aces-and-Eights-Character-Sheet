@@ -53,7 +53,7 @@
     <button type = "action" name = "act_horses">Horses</button>
 </div>
 
-<input type='hidden' class='tabstoggle' name='attr_sheetTab'  value='character'/>
+<input type='hidden' class='tabstoggle' name='attr_sheetTab'  value='weapons'/>
     
 <div class = "character">
     <div class = "grid">
@@ -215,16 +215,29 @@
     <!--Accuracy and Speed-->
     <div class = "acc_speed">
         <div><label class = "grid_header">SPEED</label></div>
-        <div><input type = "number" name = "attr_speed"></div>
+        <div><input class = "speed_acc_total_input" type = "number" name = "attr_speed"></div>
+        <input type="checkbox" class="toggle-show"/>
+        <div>
+            <span>Speed Mods</span>
+            <div class = "speed_mods">
+                <fieldset class = "repeating_speedmods">
+                    <input type = "text" class = "speed_acc_description" name = "attr_speed_mod_type" placeholder = "Description">
+                    <input type = "number" class = "speed_acc_mod" name = "attr_speed_mod" placeholder = "Mod">
+                </fieldset>    
+            </div> 
+        </div>
         <div><label class = "grid_header">ACCURACY</label></div>
-        <div><input type = "number" name = "attr_acc"></div>
-    </div>
-    
-    <div class = "speed_mods_hidden">
-        <fieldset>
-            <input type = "text" name = "attr_speed_mod_type" placeholder = "Description">
-            <input tyep = "text" name = "attr_speed_mod" placeholder = "Mod">
-        </fieldset>
+        <div><input class = "speed_acc_total_input" type = "number" name = "attr_acc"></div>
+        <input type="checkbox" class="toggle-show-acc"/>
+        <div>
+            <span>Accuracy Mods</span>
+            <div class = "acc_mods">
+                <fieldset class = "repeating_accmods">
+                    <input type = "text" class = "speed_acc_description" name = "attr_acc_mod_type" placeholder = "Description">
+                    <input type = "number" class = "speed_acc_mod" name = "attr_acc_mod" placeholder = "Mod">
+                </fieldset>    
+            </div> 
+        </div>
     </div>
         
     <hr>

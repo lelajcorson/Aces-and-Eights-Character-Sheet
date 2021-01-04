@@ -820,6 +820,10 @@
         destination and fields both can be a single attribute: 'weight'
         or an array of attributes: ['weight','number','equipped']
     */
+    
+    /*Author: GiGs(G-G-G on github), with help from The Aaron, inspired by a script created by Finderski.
+    I found the repeatingSum function at this link: https://wiki.roll20.net/RepeatingSum and copied it directly from there. The credit for it goes to the authors above
+    */
     const repeatingSum = (destinations, section, fields) => {
         if (!Array.isArray(destinations)) destinations = [destinations.replace(/\s/g, '').split(',')];
         if (!Array.isArray(fields)) fields = [fields.replace(/\s/g, '').split(',')];

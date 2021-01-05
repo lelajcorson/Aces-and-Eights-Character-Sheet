@@ -217,7 +217,7 @@ h1{
     grid-row: 1 / span 5;
     display: grid;
     grid-template-columns: 30px auto;
-    grid-template-rows: 40px 160px;
+    grid-template-rows: 30px 160px;
     column-gap: 10px;
 }
 
@@ -226,6 +226,7 @@ h1{
     grid-template-columns: 182px 50px auto;
     grid-template-rows: 30px;
     column-gap: 15px;
+    height: 30px;
 }
 
 .sheet-skills_text_grid label{
@@ -281,10 +282,15 @@ input.sheet-toggle-show-acc:not(:checked) ~ div div.sheet-acc_mods{
     display: none;
 }
 
-.sheet-acc_speed .sheet-toggle-show, .sheet-acc_speed .sheet-toggle-show-acc{
+.sheet-acc_speed .sheet-toggle-show, .sheet-acc_speed .sheet-toggle-show-acc, .sheet-acc_speed .sheet-toggle-calc{
     width: 15px;
     height: 15px;
     margin-top: 13px;
+}
+
+
+.sheet-toggle-calc{
+    margin-bottom: 4px;
 }
 
 .sheet-acc_speed .sheet-speed_mods input, .sheet-acc_speed .sheet-acc_mods input{
@@ -318,6 +324,12 @@ input.sheet-toggle-show-acc:not(:checked) ~ div div.sheet-acc_mods{
     line-height: 40px;
     font-size: 17px;
     margin-right: 15px;
+    margin-left: 5px;
+}
+
+.sheet-calc_span{
+    line-height: 35px;
+    font-size: 17px;
 }
 
 .sheet-acc_speed .sheet-speed_acc_total_input{
@@ -330,7 +342,6 @@ input.sheet-toggle-show-acc:not(:checked) ~ div div.sheet-acc_mods{
 .sheet-weapons{
     grid-row: 1;
     grid-col: 1;
-    margin-top: 10px;
 }
 
 .sheet-weapons_bio{

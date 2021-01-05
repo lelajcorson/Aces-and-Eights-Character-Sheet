@@ -211,8 +211,9 @@
 </div>
 
 <div class = "weapons">
-    
     <!--Accuracy and Speed-->
+    <input type = "checkbox" class = "toggle-calc" name = "attr_calc" value = "1">
+    <span>Autocalculate Speed and Accuracy Modifiers</span>
     <div class = "acc_speed">
         <div><label class = "grid_header">SPEED</label></div>
         <div><input class = "speed_acc_total_input" type = "number" name = "attr_speed"></div>
@@ -841,11 +842,58 @@
         }); 
     };
     
+    var change = true;
+    
+    
+    
     on('change:repeating_speedmods:speed_mod remove:repeating_speedmods', function() {
-    	repeatingSum("speed","speedmods","speed_mod");
+        if(change === true){
+            repeatingSum("speed","speedmods","speed_mod");
+    	    console.log("updating...");
+        }
+    	
     });
     
     on('change:repeating_accmods:acc_mod remove:repeating_accmods', function() {
-    	repeatingSum("acc","accmods","acc_mod");
+        if(change === true){
+            repeatingSum("acc","accmods","acc_mod");
+    	    console.log("updating...");
+        }
+    	
+    });
+    
+    
+    on("change:calc sheet:opened", function () {
+        getAttrs(["calc"], function(values) {
+            function updateCalc(callback){
+                let checked = parseInt(values.calc)||0;
+                
+                if(checked === 1) {
+        	        change = true;
+                }
+                else{
+                    change = false;
+                }
+                console.log(checked);
+                console.log(change);
+                
+                callback();
+            }
+            
+            function updateMods(){
+                console.log("calling updateMods");
+                
+                if(change){
+                    repeatingSum("acc","accmods","acc_mod");
+                    repeatingSum("speed","speedmods","speed_mod");
+            	    console.log("updating calc one..."); 
+                }
+                
+            }
+            
+            //updateCalc();
+            updateCalc(updateMods);
+        });
+        
     });
 </script>

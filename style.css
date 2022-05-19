@@ -362,6 +362,7 @@ div input.sheet-toggle-show-2e:not(:checked) ~ div.sheet-abilities_2e {
 .sheet-other_notes{
     width: 430px;
     margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 .sheet-big_box{

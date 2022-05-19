@@ -53,7 +53,7 @@
     <button type = "action" name = "act_horses">Horses</button>
 </div>
 
-<input type='hidden' class='tabstoggle' name='attr_sheetTab'  value='character'/>
+<input type='hidden' class='tabstoggle' name='attr_sheetTab'  value='horses'/>
     
 <div class = "character">
     <div class = "grid">
@@ -784,6 +784,7 @@
 
 <div class = "horses">
     <fieldset class = "repeating_horse">
+        <hr>
         <div class = "bio">
             <div class = "name"> 
                 <label>Name</label><input type = "text" name = "attr_horse_name"/> 
@@ -827,8 +828,10 @@
         </div>
         
         <div class = "horse_stats">
-            <h1 class = "header">STATS</h1>
-            <h1>NOTES/TACK</h1>
+            <div class = "horse_headers_flex">
+                <h1 class = "header">STATS</h1>
+                <h1>NOTES/TACK</h1>
+            </div>
             <div class = "horse_grid">
                 <div class = "horse_stats_grid">
                     <div>
@@ -879,7 +882,6 @@
                 <div>
                     <textarea class = "horse_tack"></textarea>
                 </div>
-                
             </div>
         </div>
     </fieldset>

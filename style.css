@@ -647,11 +647,15 @@ button.sheet-weapons_button:before{
     font-size: 20px;
 }
 
+.sheet-horse_headers_flex{
+    display: flex;
+    justify-content: space-around;
+}
 .sheet-horse_stats h1{
-    text-align: left;
+    /*text-align: left;
     margin-left: 130px;
     display: inline;
-    margin-right: 130px;
+    margin-right: 130px;*/
 }
 
 .sheet-horse_stats_grid{
@@ -679,11 +683,16 @@ button.sheet-weapons_button:before{
     display: grid;
     grid-template-columns: 450px 285px;
     grid-template-rows: 120px;
+    margin-bottom: 20px;
 }
 
 .sheet-horse_tack{
     height: 110px;
     resize: none;
+}
+
+.sheet-horses .sheet-bio{
+    margin-top: 20px;
 }
 
 /*Roll Templates*/

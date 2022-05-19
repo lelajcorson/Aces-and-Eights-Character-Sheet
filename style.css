@@ -160,6 +160,14 @@ h1{
     height: 15px;
 }
 
+input.sheet-toggle-show-mods:checked + div + div + div + div.sheet-mod_line{
+    display: flex
+}
+
+input.sheet-toggle-show-mods:not(:checked) + div + div + div + div.sheet-mod_line{
+    display: none;
+}
+
 /*Second Edition Capabilites*/
 div input.sheet-toggle-show-2e:checked ~ div.sheet-abilities_1e {
     display: none;

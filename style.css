@@ -110,18 +110,18 @@ h1{
 
 .sheet-grid{
     display: grid;
-    grid-template-columns: 256px 180px 400px;
-    grid-template-rows: 70px 50px 80px 95px 195px;
+    grid-template-columns: 56px 200px 180px 400px;
+    grid-template-rows: 50px 50px 80px auto 195px;
     column-gap: 0px;
 }
 
 /*Abilities*/
-.abilities_header{
-    height: 100px;
+.sheet-abilities_header{
+    grid-column: 1 / span 2;
 }
 .sheet-abilities_1e{
     grid-row: 2/ span 4;
-    grid-col: 1;
+    grid-column: 1 / span 2;
     display: grid;
     grid-template-columns: 70px 60px 116px;
     grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px;
@@ -133,7 +133,7 @@ h1{
 
 .sheet-abilities_2e{
     grid-row: 2/ span 4;
-    grid-col: 1;
+    grid-column: 1 / span 2;
     display: grid;
     grid-template-columns: 28px 60px 60px 98px;
     /*grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px;*/
@@ -192,13 +192,21 @@ div input.sheet-toggle-show-2e:not(:checked) ~ div.sheet-abilities_2e {
     display: none;
 }
 
+.sheet-abilities_2e .sheet-fame_rep_category{
+    width: 140px !important;
+    font-size: 15px;
+}
+
 .sheet-toggle-show-2e{
     width: 30px;
+    margin-top: 13px;
+    margin-left: 20px;
 }
 
 .sheet-toggle-show-2e ~ span{
     font-size: 17px;
-    padding-top: 5px;
+    padding-top: 7px;
+    font-weight: bold;
 }
 
 .sheet-ability_label_large{

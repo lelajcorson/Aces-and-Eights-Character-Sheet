@@ -136,7 +136,7 @@ h1{
     grid-col: 1;
     display: grid;
     grid-template-columns: 28px 60px 60px 98px;
-    grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+    /*grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px;*/
     column-gap: 3px;
     row-gap: 5px;
     justify-items: center;
@@ -154,6 +154,20 @@ h1{
 .sheet-mod_line{
     grid-column: 1 / span 4;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    width: 246px;
+}
+
+.sheet-mod_line div{
+    display: flex;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.sheet-mod_line div input{
+    margin-left: 15px;
+    text-align: center;
 }
 
 .sheet-abilities_2e .sheet-toggle-show-mods{

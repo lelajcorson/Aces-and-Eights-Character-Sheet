@@ -91,6 +91,7 @@ hr {
     padding: 0;
 }
 
+/*General Charactersheet*/
 .charsheet{
     background: white;
 }
@@ -115,10 +116,31 @@ h1{
     column-gap: 0px;
 }
 
-/*Abilities*/
+/*Abilities (General)*/
 .sheet-abilities_header{
     grid-column: 1 / span 2;
 }
+
+.sheet-ability_label_large{
+    font-size: 22px;
+    font-family: "Rye";
+    align-self: end;
+    padding: 2px;
+    margin-top: 10px;
+    justify-self: center;
+}
+
+.sheet-small_label{
+    font-size: 13px;
+    margin-bottom: 1px;
+    margin-top: 0px;
+    padding: 0px;
+    display: block;
+    justify-self: center;
+    text-align: center;
+}
+
+/*Abilites 1e*/
 .sheet-abilities_1e{
     grid-row: 2/ span 4;
     grid-column: 1 / span 2;
@@ -131,12 +153,35 @@ h1{
     align-items:center;
 }
 
+.sheet-abilities_1e input{
+    height: 30px;
+    width: 50px !important;
+    align-self: start;
+    text-align: center;
+    font-size: 20px;
+}
+
+.sheet-mod_grid{
+    display: grid;
+    grid-template-columns: 116px;
+    grid-template-rows: 20px 30px;
+    justify-items: center;
+}
+
+.sheet-fame_category{
+    font-size: 13px;
+    width: 80px;
+    height: 36px;
+    resize: none;
+    text-align: center;
+}
+
+/*Abilities 2e*/
 .sheet-abilities_2e{
     grid-row: 2/ span 4;
     grid-column: 1 / span 2;
     display: grid;
     grid-template-columns: 28px 60px 60px 98px;
-    /*grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px;*/
     column-gap: 3px;
     row-gap: 5px;
     justify-items: center;
@@ -146,7 +191,6 @@ h1{
 .sheet-abilities_2e input{
     height: 30px;
     width: 50px !important;
-    /*align-self: start;*/
     text-align: left;
     font-size: 20px;
 }
@@ -170,6 +214,11 @@ h1{
     text-align: center;
 }
 
+.sheet-abilities_2e .sheet-fame_rep_category{
+    width: 140px !important;
+    font-size: 15px;
+}
+
 .sheet-abilities_2e .sheet-toggle-show-mods{
     height: 15px;
 }
@@ -182,19 +231,13 @@ input.sheet-toggle-show-mods:not(:checked) + div + div + div + div.sheet-mod_lin
     display: none;
 }
 
-/*Second Edition Capabilites*/
+/*Second Edition Toggling*/
 div input.sheet-toggle-show-2e:checked ~ div.sheet-abilities_1e {
     display: none;
-
 }
 
 div input.sheet-toggle-show-2e:not(:checked) ~ div.sheet-abilities_2e {
     display: none;
-}
-
-.sheet-abilities_2e .sheet-fame_rep_category{
-    width: 140px !important;
-    font-size: 15px;
 }
 
 .sheet-toggle-show-2e{
@@ -209,53 +252,12 @@ div input.sheet-toggle-show-2e:not(:checked) ~ div.sheet-abilities_2e {
     font-weight: bold;
 }
 
-.sheet-ability_label_large{
-    font-size: 22px;
-    font-family: "Rye";
-    align-self: end;
-    padding: 2px;
-    margin-top: 10px;
-    justify-self: center;
-}
-
 .sheet-abilities_1e label + input, .sheet-abilities_2e label + input{
     height: 20px;
     width: 116px;
 }
 
-.sheet-abilities_1e input{
-    height: 30px;
-    width: 50px !important;
-    align-self: start;
-    text-align: center;
-    font-size: 20px;
-}
-
-.sheet-small_label{
-    font-size: 13px;
-    margin-bottom: 1px;
-    margin-top: 0px;
-    padding: 0px;
-    display: block;
-    justify-self: center;
-    text-align: center;
-}
-
-.sheet-mod_grid{
-    display: grid;
-    grid-template-columns: 116px;
-    grid-template-rows: 20px 30px;
-    justify-items: center;
-}
-
-.sheet-fame_category{
-    font-size: 13px;
-    width: 80px;
-    height: 36px;
-    resize: none;
-    text-align: center;
-}
-
+/*HP*/
 .sheet-HP_header label{
     margin-top: 7px;
 }
@@ -283,6 +285,7 @@ div input.sheet-toggle-show-2e:not(:checked) ~ div.sheet-abilities_2e {
     grid-col: 2;
 }
 
+/*Money*/
 .sheet-money_grid input{
     font-size: 21px;
     width: 180px;
@@ -294,6 +297,7 @@ div input.sheet-toggle-show-2e:not(:checked) ~ div.sheet-abilities_2e {
     grid-col: 2;
 }
 
+/*Skills*/
 .sheet-skills_grid{
     grid-col: 3;
     grid-row: 1 / span 5;
@@ -343,6 +347,7 @@ div input.sheet-toggle-show-2e:not(:checked) ~ div.sheet-abilities_2e {
     width: 70px;
 }
 
+/*Items*/
 .sheet-items_grid{
     grid-col: 2;
     grid-row: 4 / span 2;
@@ -355,7 +360,6 @@ div input.sheet-toggle-show-2e:not(:checked) ~ div.sheet-abilities_2e {
 }
 
 /*Weapons*/
-
 input.sheet-toggle-show:not(:checked) ~ div div.sheet-speed_mods{
     display: none;
 }
@@ -369,7 +373,6 @@ input.sheet-toggle-show-acc:not(:checked) ~ div div.sheet-acc_mods{
     height: 15px;
     margin-top: 13px;
 }
-
 
 .sheet-toggle-calc{
     margin-bottom: 4px;
@@ -515,6 +518,7 @@ button.sheet-weapons_button:before{
     content: "" !important;
 }
 
+/*Bio Page*/
 .sheet-bio2_grid{
     display: grid;
     grid-template-columns: 220px 130px 110px 370px;
@@ -619,6 +623,8 @@ button.sheet-weapons_button:before{
     grid-column: 1 / span 3;
 }
 
+/*Horses*/
+
 .sheet-breed input, .sheet-personality input{
     width: 130px;
 }
@@ -680,6 +686,7 @@ button.sheet-weapons_button:before{
     resize: none;
 }
 
+/*Roll Templates*/
 .sheet-rolltemplate-skills, .sheet-rolltemplate-attack{
     background: url(https://github.com/lelajcorson/Aces-and-Eights-Character-Sheet/blob/skills-rolltemplate/roll_border.png?raw=true) top left;
     background-size: 195px 104px;

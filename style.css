@@ -111,11 +111,15 @@ h1{
 .sheet-grid{
     display: grid;
     grid-template-columns: 256px 180px 400px;
-    grid-template-rows: 40px 50px 80px 95px 195px;
+    grid-template-rows: 70px 50px 80px 95px 195px;
     column-gap: 0px;
 }
 
-.sheet-abilities_grid{
+/*Abilities*/
+.abilities_header{
+    height: 100px;
+}
+.sheet-abilities_1e{
     grid-row: 2/ span 4;
     grid-col: 1;
     display: grid;
@@ -127,6 +131,46 @@ h1{
     align-items:center;
 }
 
+.sheet-abilities_2e{
+    grid-row: 2/ span 4;
+    grid-col: 1;
+    display: grid;
+    grid-template-columns: 128px 88px;
+    grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+    column-gap: 3px;
+    row-gap: 5px;
+    justify-items: center;
+    align-items:center;
+}
+
+.sheet-mod_line{
+    grid-column: 1 / span 2;
+    display: flex;
+}
+
+.sheet-toggle-show-mods{
+    height: 20px;
+}
+
+/*Second Edition Capabilites*/
+div input.sheet-toggle-show-2e:checked ~ div.sheet-abilities_1e {
+    display: none;
+
+}
+
+div input.sheet-toggle-show-2e:not(:checked) ~ div.sheet-abilities_2e {
+    display: none;
+}
+
+.sheet-toggle-show-2e{
+    width: 30px;
+}
+
+.sheet-toggle-show-2e ~ span{
+    font-size: 17px;
+    padding-top: 5px;
+}
+
 .sheet-ability_label_large{
     font-size: 22px;
     font-family: "Rye";
@@ -136,12 +180,12 @@ h1{
     justify-self: center;
 }
 
-.sheet-abilities_grid label + input{
+.sheet-abilities_1e label + input, .sheet-abilities_2e label + input{
     height: 20px;
     width: 116px;
 }
 
-.sheet-abilities_grid input{
+.sheet-abilities_1e input, .sheet-abilities_2e input{
     height: 30px;
     width: 50px !important;
     align-self: start;

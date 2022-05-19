@@ -359,6 +359,20 @@ div input.sheet-toggle-show-2e:not(:checked) ~ div.sheet-abilities_2e {
     width: 180px;
 }
 
+.sheet-other_notes{
+    width: 430px;
+    margin-top: 20px;
+}
+
+.sheet-big_box{
+    margin-top: 10px;
+    width: 430px;
+}
+
+textarea{
+    font-size: 15px;
+}
+
 /*Weapons*/
 input.sheet-toggle-show:not(:checked) ~ div div.sheet-speed_mods{
     display: none;
@@ -436,15 +450,6 @@ input.sheet-toggle-show-acc:not(:checked) ~ div div.sheet-acc_mods{
 
 .sheet-weapons_bio input{
     margin-bottom: 5px;
-}
-
-.sheet-big_box{
-    margin-top: 10px;
-    width: 430px;
-}
-
-textarea{
-    font-size: 15px;
 }
 
 .sheet-repeating_weapons{
